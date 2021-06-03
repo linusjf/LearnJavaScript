@@ -1,31 +1,29 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
 module.exports = {
-  entry: "./main.js",
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "/bundle"),
-    filename: "index_bundle.js"
+    path: __dirname + "/dist",
+    publicPath: "/",
+    filename: "bundle.js"
+  },
+  resolve: {
+    modules: ["/data/data/com.termux/files/usr/lib/node_modules"]
+  },
+  resolveLoader: {
+    modules: [
+      "/data/data/com.termux/files/usr/lib/node_modules"
+    ]
   },
   devServer: {
-    inline: true,
-    port: 8001
+    contentBase: "./dist",
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        options: {
-          presets: ["es2015", "react"]
-        }
+        use: ["babel-loader"]
       }
     ]
   },
-  plugins:[
-    new HtmlWebpackPlugin({
-      template: "./index.html"
-    })
-  ]
 };
+
