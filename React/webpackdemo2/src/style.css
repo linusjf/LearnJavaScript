@@ -9,4 +9,5 @@
 .hello {
   background: url("./icon.jpg");
   color: red;
+  font-family:"Montserrat";
 }
