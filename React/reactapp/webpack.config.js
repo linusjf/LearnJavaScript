@@ -9,9 +9,7 @@ module.exports = {
     modules: ["/data/data/com.termux/files/usr/lib/node_modules"]
   },
   resolveLoader: {
-    modules: [
-      "/data/data/com.termux/files/usr/lib/node_modules"
-    ]
+    modules: ["/data/data/com.termux/files/usr/lib/node_modules"]
   },
   devServer: {
     contentBase: "./dist",
