@@ -1,9 +1,14 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  entry: "./src/index.js",
+  mode: "development",
+  entry: {
+    index: "./src/index.js"
+  },
   output: {
-    path: __dirname + "/dist",
-    publicPath: "/",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    clean: true
   },
   resolve: {
     modules: ["/data/data/com.termux/files/usr/lib/node_modules"]
@@ -11,6 +16,7 @@ module.exports = {
   resolveLoader: {
     modules: ["/data/data/com.termux/files/usr/lib/node_modules"]
   },
+  devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
   },
@@ -18,10 +24,20 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"]
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-proposal-object-rest-spread"]
+          }
+        }
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "ReactApp",
+    }),
+  ]
 };
-
