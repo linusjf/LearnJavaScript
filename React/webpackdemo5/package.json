@@ -1,0 +1,25 @@
+{
+  "name": "webpackdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "server": "node server.js",
+    "watch": "webpack --watch",
+    "build": "webpack --config webpack.config.js --mode development --color"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+     "html-webpack-plugin": "5.3.1",
+     "webpack": "5.38.1",
+     "webpack-cli": "4.7.0"
+   },
+   "dependencies": {
+     "lodash": "4.17.21"
+   }
+}
