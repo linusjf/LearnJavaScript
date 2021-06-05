@@ -6,6 +6,7 @@
   "scripts": {
   "start": "webpack serve --open",
   "server": "node dev-server.js",
+  "express": "node server.js",
   "watch": "webpack --watch",
     "build": "webpack --config webpack.config.js --mode development --color"
   },
