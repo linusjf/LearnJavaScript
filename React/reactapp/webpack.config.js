@@ -37,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "ReactApp",
-    }),
+      template: "index.html"
+    })
   ]
 };
