@@ -27,4 +27,12 @@ module.exports =  {
       title: "Hot Module Replacement",
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
