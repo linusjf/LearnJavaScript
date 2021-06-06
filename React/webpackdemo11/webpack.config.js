@@ -3,7 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = {
+  mode: "development",
   entry: {
+    polyfills: "./src/polyfills",
     index: "./src/index.js",
   },
   output: {
@@ -33,6 +35,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Shimming",
+      template: "index.html"
     }),
     new webpack.ProvidePlugin({
       join: ["lodash", "join"],
