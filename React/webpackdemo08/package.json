@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "5.2.6",
+    "css-loader": "5.2.7",
     "lodash": "4.17.21",
     "style-loader": "3.1.0",
     "webpack": "5.44.0",
