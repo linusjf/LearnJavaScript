@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "6.3.0",
+    "css-loader": "6.4.0",
     "lodash": "4.17.21",
     "style-loader": "3.3.0",
     "webpack": "5.58.0",
