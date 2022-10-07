@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dynamic</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script> 
+  </head>
+  <body>
+    <div id="show"></div>   
+    <script type="text/babel"> 
+      function timer() {  
+      // timer() is called per 1000 milliseconds 
+      // set an element to be rendered 
+      const element = (   
+      <h2>It is {new Date().toLocaleTimeString()} now.</h2> 
+      );
+      // {new Date().toLocaleTimeString()} gets local time
+      // define a render function element,
+      /*  render this element means to render <h2>It is {new Date().toLocaleTimeString()} now.</h2>  */
+      /* show the content in the tag where id =" show"  */ 
+      ReactDOM.render(element, 
+      document.getElementById('show'));   
+      }
+      // run timer() per 1000 milliseconds
+      setInterval(timer, 1000);  
+  </script>
+  </body> 
+</html>
