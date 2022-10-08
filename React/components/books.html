@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Books</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+	<div id="show"></div> 
+  <script type="text/babel"> 
+    function Book1(props) { 
+    // sub component1
+    return <h3>{props.title1}</h3>; 
+    } 
+    function Book2(props) { 
+    // sub component 
+    return <h3>{props.title2}</h3>; 
+    } 
+    function Book3(props) { 
+    // sub component
+    return <h3>{props.title3}</h3>; 
+    } 
+    function AllBooks() {  
+    // complex component 
+    return ( <div> <Book1 title1="Kotlin in 8 Hours" />
+    <Book2 title2="Python in 8 Hours" /> 
+    <Book3 title3="Django in 8 Hours" /> </div> ); 
+    } 
+    ReactDOM.render( <AllBooks/>, 
+    // render AllBooks function 
+    document.getElementById('show')); 
+  </script>
+	</body>
+</html>
