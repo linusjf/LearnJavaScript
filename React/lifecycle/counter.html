@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Counter</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+    <div id='show'/>
+<script type="text/babel">
+  class Counter extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = {count:0};
+    }
+    shouldComponentUpdate() {
+     return Math.random() > 0.5;
+    }
+    clickNum = () => {
+     this.setState(function(state) {
+      return {count: state.count + 1};
+     });
+    }
+  render() {
+    return (
+    <div><button onClick={this.clickNum}>Click Me</button>
+    <h2>The number of clicks is: {this.state.count}</h2>
+    </div>
+    );
+    }
+  }
+  ReactDOM.render( <Counter />, 
+  document.getElementById('show')); 
+  </script>		
+	</body>
+</html>
