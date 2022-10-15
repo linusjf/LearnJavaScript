@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>Select</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+    <div id='show'></div>
+    <script type="text/babel">
+      class Book extends React.Component {
+      constructor(props) {
+      super(props);
+      this.state = {value:'Go'};
+    }
+    handleChange = (event) => {
+     this.setState({value:event.target.value});
+    }
+    handleSubmit = (event) => {
+    event.preventDefault();
+    var msg = "Your favorite subject is: " + this.state.value;
+    alert(msg);
+    }
+    render() {
+    return (
+    <form onSubmit={this.handleSubmit}>
+    <label>Please select your favorite book:
+    <p>
+    <select value={this.state.value} onChange={this.handleChange}>
+    <option value="Go">Go in 8 hours</option>
+    <option value="Lua">Lua in 8 hours</option>
+    <option value="Rust">Rust in 8 hours</option>
+    <option value="Scala">Scala in 8 hours</option>
+    <option value="Django">Django in 8 hours</option>
+    </select>
+    </p>
+    </label>
+    <input type="submit" value="Submit"/>
+    </form>
+  );
+  }
+}
+ReactDOM.render(<Book />,document.getElementById('show')); 
+</script>	
+</body>
+</html>
