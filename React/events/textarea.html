@@ -2,7 +2,7 @@
 <html>
 	<head>
     <meta charset="UTF-8" />
-		<title>Validity</title>
+		<title>TextArea</title>
     <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
     <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
@@ -13,27 +13,17 @@
       class MyComponent extends React.Component {
       constructor(props) {
       super(props);
-      this.state = {id:''};
+      this.state = {description:''};
       }
-      handleChange = (event) => {
-      this.setState({id:event.target.value});
-      }
-      validate = (id) => {
-      if ('12345' == id) 
-      return (
-      <h4>Your id number is {id}</h4>
-      );
-      else 
-      return (
-      <h4>Please enter your number!</h4>
-      );
+      handle = (event) => {
+      this.setState({description:event.target.value});
       }
       render() {
-      const valid = this.validate(this.state.id);
       return (
       <form>
-      <p>{valid}</p>
-      <input type='text' onChange={this.handleChange}/>
+      <p>Please input your description</p>
+      <textarea onChange={this.handle}/>
+      <h2>Your description is {this.state.description}</h2>
       </form>
       );
       }
