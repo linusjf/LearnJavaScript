@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8" />
+		<title>Validity</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+    <div id='root'></div>
+    <script type="text/babel">
+      class MyComponent extends React.Component {
+      constructor(props) {
+      super(props);
+      this.state = {id:''};
+      }
+      handleChange = (event) => {
+      this.setState({id:event.target.value});
+      }
+      validate = (id) => {
+      if ('12345' === id) 
+      return '<h4>Your id number is {id}</h4>';
+      else 
+      return '<h4>Please enter your number!</h4>';
+      }
+      render() {
+      const valid = this.validate(this.state.id);
+      return (
+      <form>
+      <p>{valid}</p>
+      <input type='text' onChange={handleChange}/>
+      </form>
+      );
+      }
+    }
+    ReactDOM.render(<MyComponent/>,document.getElementById('root'));
+    </script>
+  </body>
+</html>
