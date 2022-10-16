@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+		<title>Check Error</title>
+	</head>
+	<body>
+    <div id='root'></div>
+    <script type='text/babel'>
+      class MyComponent extends React.Component {
+      constructor(props) {
+      super(props);
+      this.state = {
+       age: null,
+       message:''
+      }
+      }
+      handle = (event) => {
+        var val = event.target.value;
+        var err = '';
+        if (!Number(val) && val !='') {
+        err = <b>Please input number!</b>;
+        }
+        else { 
+        this.setState({age:val});
+        }
+        this.setState({message:err});
+    }
+    render() {
+     return (
+     <form>
+     <p>Please input your age:</p>
+     <input type='text' onChange={this.handle}/>
+     <p>{this.state.message}</p>
+     <h3>{this.state.age}</h3>
+     </form>
+  );}
+  }
+  ReactDOM.render(<MyComponent/>,
+  document.getElementById('root'));
+  </script>
+	</body>
+</html>
