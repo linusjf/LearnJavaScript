@@ -19,10 +19,14 @@
       this.setState({id:event.target.value});
       }
       validate = (id) => {
-      if ('12345' === id) 
-      return '<h4>Your id number is {id}</h4>';
+      if ('12345' == id) 
+      return (
+      <h4>Your id number is {id}</h4>
+      );
       else 
-      return '<h4>Please enter your number!</h4>';
+      return (
+      <h4>Please enter your number!</h4>
+      );
       }
       render() {
       const valid = this.validate(this.state.id);
