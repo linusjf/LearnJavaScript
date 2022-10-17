@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+	<head>
+    <meta charset="utf-8" />
+		<title>Email</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+	</head>
+	<body>
+<form name="myForm"> 
+  Please input your email address: <br/><br/> 
+  <input type="email" name="addr" data-ng-model="data">
+  <br/><br/>		
+  <div data-ng-show="myForm.addr.$error.email"> Invalid email address!</div>
+  </form>
+  </body>
+</html>
