@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8" />
+    <script src="https://code.angularjs.org/1.6.9/angular.js">
+    </script>
+		<title>Uppercase</title>
+	</head>
+	<body>
+	<div data-ng-app=""  data-ng-init="myVariable = 'ray yao' "> 
+    <p>User Name: 
+    <input type="text" data-ng-model = "myVariable">
+    </p> 
+    <p data-ng-bind="myVariable | uppercase">
+    </p>
+    <p data-ng-bind="myVariable | lowercase">
+    </p>
+  </div>	
+	</body>
+</html>
