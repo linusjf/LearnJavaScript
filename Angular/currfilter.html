@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <script src="https://code.angularjs.org/1.6.9/angular.js">
+    </script>
+        <meta charset="utf-8" />
+		<title>Currfilter</title>
+	</head>
+	<body>
+	<div data-ng-app="" data-ng-init = "statement =[{name: 'Jay', salary:8100}, {name: 'Sdwt', salary:7000}, {name: 'Hao', salary:9000}, {name: 'Luoe', salary:6300}, {name: 'Fin', salary:9800}]"> 
+    <table border="1" > 
+      <tr><th>Employee name</th> <th>Employee Income</th>
+        </tr>
+        <tr data-ng-repeat="s in statement">
+          <td data-ng-bind="s.name "></td> 
+          <td data-ng-bind="s.salary | currency "></td>
+        </tr> 
+    </table>
+  </div>
+	</body>
+</html>
