@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+	<head>
+    <script src="https://code.angularjs.org/1.6.9/angular.js">
+    </script>
+        <meta charset="utf-8" />
+		<title>Inputfilter</title>
+	</head>
+	<body>
+    <div data-ng-init="members = [{name:'Andy', age:'19'}, {name:'Rose', age:'18'}, {name:'Jony', age:'17'}, {name:'Judy', age:'16'}, {name:'Tomy', age:'15'}]">
+      <table> 
+        <tr><th>Name</th><th>Age</th></tr>
+      <tr data-ng-repeat="person in members | filter:search"> 
+        <td>{{person.name}}</td><td>{{person.age}}</td> 
+      </tr> 
+      </table>
+      <br>Please input one of the names or ages<br> 
+      <input data-ng-model="search"> 
+    </div>
+	</body>
+</html>
