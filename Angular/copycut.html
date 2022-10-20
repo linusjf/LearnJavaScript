@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html data-ng-app>
+	<head>
+    <script src="https://code.angularjs.org/1.6.9/angular.js">
+    </script>
+    <meta charset="utf-8" />
+		<title>Copycut</title>
+	</head>
+	<body>
+	<input data-ng-copy="copyResult=true" data-ng-init="copyResult=false; val1='please copy me'" data-ng-model="val1"/>
+  <p>copy status: {{copyResult}}</p> 
+  <input data-ng-cut= "cutResult=true" data-ng-init="cutResult=false; val2='please cut me'" data-ng-model="val2"/> 
+  <p>cut status: {{cutResult}}</p>
+	</body>
+</html>
