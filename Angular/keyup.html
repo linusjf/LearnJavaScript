@@ -7,7 +7,7 @@
 	</head>
 	<body data-ng-app="">
     <p>
-    <textarea data-ng-mousemove="calculate = calculate + 1" data-ng-init="calculate=0"> Here is a textarea </textarea>
+    <textarea data-ng-keyup="calculate = calculate + 1" data-ng-init="calculate=0"> Here is a textarea </textarea>
     </p>	
 	<h3>count: {{calculate}}</h3>
   </body>
