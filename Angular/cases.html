@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+        <meta charset="utf-8" />
+		<title>Uppercase</title>
+	</head>
+	<body>
+	<div data-ng-app="ourAngular" data-ng-controller="ourCtrl"> 
+    <p>{{ str1 }}</p> 
+    <p>{{ str2 }}</p> 
+    <p>{{ str3 }}</p> 
+    <p>{{ str4 }}</p> 
+    <script> 
+      var ourApp = angular.module('ourAngular', [ ]); 
+      ourApp.controller('ourCtrl', function($scope) { 
+        $scope.str1 = "javascript";
+        $scope.str2 = angular.uppercase($scope.str1); ; 
+        $scope.str3 = "ANGULAR";
+        $scope.str4 = angular.lowercase($scope.str3); 
+      });
+    </script> 
+  </div>
+	</body>
+</html>
