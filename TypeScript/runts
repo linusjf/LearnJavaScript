@@ -2,4 +2,8 @@
 filename=$1
 filename="${filename%.*}"
 tsc $1
-node $filename.js
+if [[ 0 -eq $? ]]
+then
+  node $filename.js
+fi
+exit $?
