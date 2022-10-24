@@ -5,9 +5,10 @@ if [[ -e "$filename".js ]]
 then
   rm "$filename".js
 fi
-tsc $1
-if [[ 0 -eq $? ]]
+tsc "$1"
+ret="$?"
+if [[ 0 -eq "$ret" ]]
 then
   node "$filename".js
 fi
-exit $?
+exit "$ret"
