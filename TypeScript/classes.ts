@@ -27,3 +27,31 @@ obj.myFunc();
 
 Parent.num = 200;
 Parent.func();
+
+interface Book {
+  title:string;
+}
+
+class EBook implements Book {
+title:string = "Shell Scripting in 8 hours";
+}
+
+var book = new EBook();
+console.log(book.title);
+
+var ebook:Book = {
+title:"Perl in 8 hours",
+}
+console.log(ebook.title);
+
+var books = {
+title1:"Swift in 8 hours",
+title2:"Scala in 8 hours",
+title:function(){}
+};
+console.log(books.title1);
+console.log(books.title2);
+books.title = function() {
+console.log("Kotlin in 8 hours");
+};
+books.title();
