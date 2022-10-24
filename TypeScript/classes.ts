@@ -3,7 +3,7 @@ class Parent {
   static func():void {
     console.log("The num value is " + Parent.num);
   }
-  str:string;
+  str:string = "";
   myFunc():void {
     console.log("I am from parent class.");
   }
