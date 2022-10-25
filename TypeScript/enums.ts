@@ -22,3 +22,51 @@ enum TenPlus { Ten = 10, Eleven, Twelve };
 console.log(TenPlus);
 enum MyOddSet { Three = 3, Five = 5, Seven = 7, Nine = 9 };
 console.log(MyOddSet);
+enum MimeTypes { 
+  JPEG = <any>'image/jpeg',
+    PNG = <any>'image/png', 
+    PDF = <any>'application/pdf' 
+}
+console.log(MimeTypes);
+enum MyType { 
+  Value = 3, 
+    ValueEx = 30, 
+    ValueEx2 = 300 
+} 
+console.log(MyType);
+enum FancyType { 
+  OneArr = <any>[1], 
+    TwoArr = <any>[2, 2], 
+    ThreeArr = <any>[3, 3, 3] 
+}
+console.log(FancyType);
+enum SomeEnum { A, B } 
+let enumValues:Array<string>= []; 
+for(let value in SomeEnum) { 
+  if(typeof SomeEnum[value] === 'number') {
+    enumValues.push(value); 
+  } 
+} 
+enumValues.forEach(v=> console.log(v))
+
+enum SourceEnum { 
+  value1 = <any>'value1', 
+    value2 = <any>'value2' 
+} 
+
+enum AdditionToSourceEnum { 
+  value3 = <any>'value3', 
+    value4 = <any>'value4' 
+} 
+// we need this type for TypeScript to resolve the types correctly 
+type TestEnumType = SourceEnum | AdditionToSourceEnum; 
+// and we need this value "instance" to use values 
+let TestEnum = Object.assign({}, SourceEnum, AdditionToSourceEnum);
+
+function check(test: TestEnumType) { 
+  return test === TestEnum.value2; 
+}
+console.log(TestEnum.value1);
+console.log(TestEnum.value2 === <any>'value2'); 
+console.log(check(TestEnum.value2)); 
+console.log(check(TestEnum.value3));
