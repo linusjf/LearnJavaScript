@@ -44,3 +44,8 @@ console.log("L Unicode is: " + str.charCodeAt(3));
 str = "Swift in 8 Hours"; 
 console.log(str.toLowerCase( ));
 console.log(str.toUpperCase( ));
+let singleQuotes: string = 'single'; 
+let doubleQuotes: string = "double"; 
+let templateString: string = `I am ${ singleQuotes }`; 
+// I am single
+console.log(templateString);

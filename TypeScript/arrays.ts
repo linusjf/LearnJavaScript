@@ -49,4 +49,19 @@ arr.pop(); // removes an element at the end
 console.log("The return array is: " + arr);
 arr = new Array(" C ", " B ", " D ", " A ");
 var sorted = arr.sort(); // sort the array 
-console.log("The sorted elements are: " + sorted );
+console.log("The sorted elements are:" + sorted);
+let threePigs: number[] = [1, 2, 3];
+console.log(threePigs);
+let genericStringArray: Array<string> = ['first', '2nd', '3rd'];
+console.log(genericStringArray);
+const inventory = [ 
+  {name: 'apples', quantity: 2}, 
+  {name: 'bananas', quantity: 0}, 
+  {name: 'cherries', quantity: 5} 
+]; 
+function findCherries(fruit:any) { 
+  return fruit.name === 'cherries';
+}
+console.log(inventory.find(findCherries)); 
+ /* OR */ 
+console.log(inventory.find(e => e.name === 'apples')); 
