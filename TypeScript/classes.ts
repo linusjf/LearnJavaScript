@@ -81,7 +81,17 @@ class Car extends Machine {
 
 let myCar = new Car("Konda", 10, 70); 
 myCar.move(); 
-// position is now 80 
 console.log(myCar.summary()); 
-// prints "Konda makes this machine." 
 console.log(myCar.moreInfo());
+
+class SelfDrivingCar extends Car { 
+  constructor(mfr:string,startAutoPilot: boolean) { 
+    super(mfr,0, 42); 
+    if (startAutoPilot) { 
+      this.move(); 
+    } 
+  } 
+} 
+
+let car = new SelfDrivingCar("Tesla",true); 
+console.log(car.position);
