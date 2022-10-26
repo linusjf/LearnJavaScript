@@ -1,11 +1,11 @@
-var x = true; 
-var y = false; 
-var a = x && y;  
+var lx = true; 
+var ly = false; 
+var la = lx && ly;  
 // false 
-console.log ( a );  
-var b = x || y; 
+console.log ( la );  
+var lb = lx || ly; 
 // true 
-console.log ( b );  
-var c =! x; 
+console.log ( lb );  
+var lc =! lx; 
 // false
-console.log ( c );   
+console.log ( lc );   

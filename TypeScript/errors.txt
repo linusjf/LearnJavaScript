@@ -1,0 +1,4 @@
+custenum.ts(11,7): error TS2567: Enum declarations can only merge with namespace or other enum declarations.
+custenum.ts(16,7): error TS2451: Cannot redeclare block-scoped variable 'TestEnum'.
+enums.ts(52,6): error TS2567: Enum declarations can only merge with namespace or other enum declarations.
+enums.ts(64,5): error TS2451: Cannot redeclare block-scoped variable 'TestEnum'.
