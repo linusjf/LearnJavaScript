@@ -23,7 +23,15 @@ function addMetadata(metadata: any) {
   }
 }
 
+function log<T>(target: T) { 
+  // Do something with target 
+  console.log(target); 
+  // Return target 
+  return target; 
+}
+
 @addMetadataTarget
+@log
 class Person { 
   private _name: string; 
   public constructor(name: string) {
