@@ -1,3 +1,4 @@
+// @ts-nocheck
 class Enum { 
   constructor(protected value: string) {} 
   public toString() { 

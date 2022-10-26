@@ -49,7 +49,7 @@ for(let value in SomeEnum) {
 } 
 enumValues.forEach(v=> console.log(v))
 
-enum SourceEnum { 
+enum SrcEnum { 
   value1 = <any>'value1', 
     value2 = <any>'value2' 
 } 
@@ -59,14 +59,14 @@ enum AdditionToSourceEnum {
     value4 = <any>'value4' 
 } 
 // we need this type for TypeScript to resolve the types correctly 
-type TestEnumType = SourceEnum | AdditionToSourceEnum; 
+type TestEnumType = SrcEnum | AdditionToSourceEnum; 
 // and we need this value "instance" to use values 
-let TestEnum = Object.assign({}, SourceEnum, AdditionToSourceEnum);
+let TstEnum = Object.assign({}, SrcEnum, AdditionToSourceEnum);
 
 function check(test: TestEnumType) { 
-  return test === TestEnum.value2; 
+  return test === TstEnum.value2; 
 }
-console.log(TestEnum.value1);
-console.log(TestEnum.value2 === <any>'value2'); 
-console.log(check(TestEnum.value2)); 
-console.log(check(TestEnum.value3));
+console.log(TstEnum.value1);
+console.log(TstEnum.value2 === <any>'value2'); 
+console.log(check(TstEnum.value2)); 
+console.log(check(TstEnum.value3));
