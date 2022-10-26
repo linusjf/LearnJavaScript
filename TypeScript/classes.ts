@@ -76,7 +76,7 @@ class Car extends Machine {
   } 
   moreInfo () { 
     return `This is a car located at ${this.position} and going ${this.speed} mph!`; 
-  } 
+  }
 }
 
 let myCar = new Car("Konda", 10, 70); 
@@ -95,3 +95,44 @@ class SelfDrivingCar extends Car {
 
 let car = new SelfDrivingCar("Tesla",true); 
 console.log(car.position);
+
+class Vehicle { 
+  public position: number = 0; 
+  private _speed: number = 42; 
+  private _MAX_SPEED = 100;
+  move () { 
+    this.position += this._speed; 
+  } 
+  get speed(): number { 
+    return this._speed; 
+  } 
+  set speed(value: number) { 
+    this._speed = Math.min(value, this._MAX_SPEED); 
+  } 
+} 
+
+let vhl = new Vehicle(); 
+vhl.speed = 120; 
+console.log(vhl.speed);
+
+class SomeClass { 
+  public static SomeStaticValue: string = "hello"; 
+  public someMemberValue: number = 15; 
+  private somePrivateValue: boolean = false; 
+  constructor () { 
+    SomeClass.SomeStaticValue = SomeClass.getGoodbye();
+    this.someMemberValue = this.getFortyTwo();
+    this.somePrivateValue = this.getTrue();
+  } 
+  public static getGoodbye(): string { 
+    return "goodbye!"; 
+  } 
+  public getFortyTwo (): number { 
+  return 42; 
+  }
+  private getTrue (): boolean { 
+    return true; 
+  } 
+}
+
+
