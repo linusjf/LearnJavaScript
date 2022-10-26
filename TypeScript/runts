@@ -5,7 +5,8 @@ if [[ -e "$filename".js ]]
 then
   rm "$filename".js
 fi
-tsc -t es2015 --pretty "$1"
+tsc $(cat tsconfig.json | strip-json-comments | jq -r '.compilerOptions | to_entries[] | "--\(.key) \(.value)"') --pretty "$1"
+#tsc -t es2015 --pretty "$1"
 ret="$?"
 if [[ 0 -eq "$ret" ]]
 then
