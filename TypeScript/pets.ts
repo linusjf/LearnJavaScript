@@ -16,7 +16,7 @@ interface Dog extends Pet {
 } 
 interface Bird extends Pet { 
   species: "bird"; 
-  sing(); 
+  sing():any; 
 }
 
 function buyPet(pet: Species, name: string) : Pet; 

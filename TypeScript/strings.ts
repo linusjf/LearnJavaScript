@@ -1,11 +1,11 @@
 var obj1 = new String("Swift"); 
-var obj2 = " in 8 Hours"; 
-var myStr = obj1 + obj2; 
+var concobj2 = " in 8 Hours"; 
+var myStr = obj1 + concobj2; 
 console.log (myStr);
-var obj = new String("Kotlin in 8 Hours!");
+var kotlin = new String("Kotlin in 8 Hours!");
 // get the string length 
-var num = obj.length;
-console.log("The length is: " + num);
+var length = kotlin.length;
+console.log("The length is: " + length);
 var num1 = 100; 
 var num2 = 200; 
 var str1 = num1.toString(); 
@@ -13,22 +13,22 @@ var str2 = num2.toString();
 // connect two strings 
 var str3 = str1 + str2;
 console.log ( str3 );
-var obj = new String("HTML");  
+var htmlobj = new String("HTML");  
 // create a string object “obj” 
-console.log("obj.charAt(0) is: " + obj.charAt(0)); 
-console.log("obj.charAt(1) is: " + obj.charAt(1));  
-console.log("obj.charAt(2) is: " + obj.charAt(2));  
-console.log("obj.charAt(3) is: " + obj.charAt(3));
+console.log("obj.charAt(0) is: " + htmlobj.charAt(0)); 
+console.log("obj.charAt(1) is: " + htmlobj.charAt(1));  
+console.log("obj.charAt(2) is: " + htmlobj.charAt(2));  
+console.log("obj.charAt(3) is: " + htmlobj.charAt(3));
 var str11 = new String( "Django" ); 
 var str21 = new String( " in 8 Hours" ); 
 var str31 = str11.concat(str21.toString()); 
 console.log(str31);
 var str = new String( "Kotlin in 8 Hours" ); 
-var index = str.indexOf( "in" ); 
-console.log("The index is: " + index);
+var idx = str.indexOf( "in" ); 
+console.log("The index is: " + idx);
 var str = new String( "Kotlin in 8 Hours" ); 
-var index = str.lastIndexOf( "in" ); 
-console.log("The index is: " + index);
+var indx = str.lastIndexOf( "in" ); 
+console.log("The index is: " + indx);
 var oldstr = "JavaScript"; 
 var newstr = "TypeScript"; 
 var mystr = oldstr.replace( oldstr, newstr ); 

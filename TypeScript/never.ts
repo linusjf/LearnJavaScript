@@ -1,11 +1,13 @@
 // never type 
-var x: never;
-var y: never;
-var z: number = 100;
+var xn: never;
+var yn: never;
+var zn: number = 100;
 // correct ! 
-x = y; 
+// @ts-ignore
+xn = zn; 
 // correct ! output: undefined
-console.log(x); 
+console.log(xn); 
 // error !
-x = z;
-console.log(x);
+// @ts-ignore
+xn = zn;
+console.log(xn);

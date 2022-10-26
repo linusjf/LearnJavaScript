@@ -1,18 +1,18 @@
 function foo(constructorFunc: { 
-  new() 
+  new():any 
 }) { 
-  new constructorFunc(); 
+  new (constructorFunc as any)(); 
 }
 
 interface IConstructor { 
-  new();
+  new():any;
 }
 function foonew(constructorFunc: IConstructor) { 
-  new constructorFunc(); 
+  return new (constructorFunc as any)(); 
 }
 
 interface INumberConstructor {
-  new(num: number); 
+  new(num: number):any; 
 } 
 function foonum(constructorFunc: INumberConstructor) { 
   new constructorFunc(1); 
@@ -29,8 +29,8 @@ function foogeneric<T, U>(constructorFunc: ITConstructor<T, U>,
 function foofunc(func: { (): void }) { 
   func(); 
 } 
-function fooconstr(constructorWithParamsFunc: { (num: number): void }) { 
-  new constructorWithParamsFunc(1); 
+function fooconstr(constructorWithParamsFunc: { (num: number): any }) { 
+  return new (constructorWithParamsFunc as any)(1); 
 }
 
 interface IFunction { 

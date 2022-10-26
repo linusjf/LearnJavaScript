@@ -1,5 +1,5 @@
-var str = "100"; 
+var hunstr = "100"; 
 // string type 
-var num:number = <any> str; 
+var numb:number = <any> hunstr; 
 // change to number type 
-console.log(num);
+console.log(numb);

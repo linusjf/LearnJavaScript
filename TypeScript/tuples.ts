@@ -10,10 +10,10 @@ console.log( tup[0] + tup[1] + tup[2] );
 // create a tuple 
 tup = ["Score", 100, true]; 
 // tuple assign values
-var [ x, y, z ] = tup;
-console.log( x ); 
-console.log( y ); 
-console.log( z );
+var [ ex, why, zee ] = tup;
+console.log( ex ); 
+console.log( why); 
+console.log( zee );
 // union types 
 var value: string | number | boolean;
 value = "Score"; 
@@ -23,13 +23,12 @@ console.log( value + " is a " + typeof(value) + " type" );
 value = true;
 console.log( value + " is a " + typeof(value) + " type" );
 // union types 
-var arr: string[ ] | number[ ]; 
-arr = ["A","B","C"];
+var array: string[ ] | number[ ] = ["A","B","C"];
 var n:number; 
-for(n = 0;n<arr.length;n++) { 
-  console.log(arr[n]); 
+for(n = 0;n<array.length;n++) { 
+  console.log(array[n]); 
 }
-arr = [10,11,12];
-for(n = 0;n<arr.length;n++) { 
-  console.log(arr[n]);
+array = [10,11,12];
+for(n = 0;n<array.length;n++) { 
+  console.log(array[n]);
 }

@@ -22,9 +22,9 @@ for(index in arr) {
   // iterate over the array 
   console.log(arr[index]) ;
 }
-var array:number[] = [10, 11, 12];
+var ar:number[] = [10, 11, 12];
 // assign the each element value 
-var[ x, y, z] = array; 
+var[ x, y, z] = ar; 
 console.log(x);
 console.log(y); 
 console.log(z);

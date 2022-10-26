@@ -18,7 +18,7 @@ class TestEnum extends SourceEnum {
     public static value4 = new TestEnum('value4'); 
 } 
   
-function check(test: TestEnum) { 
+function checkEnum(test: TestEnum) { 
     return test === TestEnum.value2; 
 } 
 let value1 = TestEnum.value1; 
@@ -26,7 +26,7 @@ console.log(value1 + ', hello');
 console.log(value1.toString() === 'value1'); 
 console.log(value1.is('value1'));
 console.log(!TestEnum.value3.is(TestEnum.value3)); 
-console.log(check(TestEnum.value2)); 
+console.log(checkEnum(TestEnum.value2)); 
 // this works but perhaps your TSLint would complain 
 // attention! does not work with === 
 // use .is() instead 

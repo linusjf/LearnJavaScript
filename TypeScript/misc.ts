@@ -1,14 +1,14 @@
 var globalNum = 200; 
 // global variable 
-function myFunc():void { 
+function myFunction():void { 
   // local variable 
   var localNum = 100; 
   console.log("The local variable: " + localNum);
 } 
 console.log("The global variable: " + globalNum); 
-myFunc();
+myFunction();
 
-class Vehicle {
+class Automobile {
   car:string; 
   // declare a variable member “car”
   constructor(car:string) {
@@ -19,9 +19,9 @@ class Vehicle {
   }
 }
 
-var obj = new Vehicle("limousine");
-console.log(obj.car);
-obj.drive();
+var auto = new Automobile("limousine");
+console.log(auto.car);
+auto.drive();
 
 class Building {
   High:number;
