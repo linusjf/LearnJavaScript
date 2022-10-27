@@ -59,3 +59,32 @@ export class BluetoothConnector implements Connector {
     return true;
   }
 }
+
+interface JQuery { 
+  pluginFunctionThatDoesNothing(): void; 
+  // create chainable function
+  manipulateDOM(start: HTMLElement): JQuery;
+}
+
+interface IKickable { 
+  kick(distance: number): void; 
+} 
+class Ball { 
+  kick(distance: number): void { 
+    console.log("Kicked", distance, "meters!");
+  }
+}
+    
+let kickable: IKickable = new Ball(); 
+kickable.kick(40);
+
+interface Pet { 
+  species: string; 
+  age: number; 
+}
+
+function checkCompatible(petOne:Pet, petTwo:Pet) { 
+  if (petOne.species === petTwo.species && Math.abs(petOne.age - petTwo.age) <= 5) { 
+    return true; 
+  } 
+}

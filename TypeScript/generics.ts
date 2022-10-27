@@ -32,3 +32,29 @@ s2.getAll().map(event => event.code).forEach(event => {
   console.log(event.message); 
   console.log(event.status); 
 });
+
+interface IResult<T> { 
+  wasSuccessful: boolean; 
+  error: T;
+}
+
+var response: IResult<string> = {
+ wasSuccessful:true,
+ error:"",
+}
+var error: string = response.error;
+console.log(error);
+
+interface IRunnable<T, U> { 
+  run(input: T): U; 
+} 
+
+var runnable: IRunnable<string, number> = {
+  run(input:string):number {
+    return input.length;
+  }
+} 
+
+var input:string = "Input";
+var result: number = runnable.run(input);
+console.log(result);
