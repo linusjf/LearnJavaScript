@@ -1,0 +1,61 @@
+interface IPerson { 
+  name: string; 
+  age: number; 
+  breath(): void; 
+}
+
+interface IManager extends IPerson { 
+  managerId: number; 
+  managePeople(people: IPerson[]): void; 
+}
+
+interface ISampleClassInterface { 
+  sampleVariable: string; 
+  sampleMethod(): void; 
+  optionalVariable?: string; 
+}
+
+class SampleClass implements ISampleClassInterface { 
+  public sampleVariable: string; 
+  private answerToLifeTheUniverseAndEverything: number; 
+  constructor() { 
+    this.sampleVariable = 'string value'; 
+    this.answerToLifeTheUniverseAndEverything = 42; 
+  } 
+  public sampleMethod(): any {
+    return this.answer;
+  }
+  private answer(q: any): number {
+      return this.answerToLifeTheUniverseAndEverything; 
+  }
+}
+
+interface Connector{ 
+  doConnect(): boolean; 
+}
+
+export class WifiConnector implements Connector { 
+  public doConnect(): boolean { 
+    console.log("Connecting via wifi"); 
+    console.log("Get password");
+    console.log("Lease an IP for 24 hours");
+    console.log("Connected"); 
+    return true; 
+  }
+}
+
+export class System { 
+  constructor(private connector: Connector) { 
+    // dependency injection
+    connector.doConnect(); 
+  } 
+}
+
+export class BluetoothConnector implements Connector { 
+  public doConnect(): boolean { 
+    console.log("Connecting via Bluetooth"); 
+    console.log("Pair with PIN"); 
+    console.log("Connected"); 
+    return true;
+  }
+}
