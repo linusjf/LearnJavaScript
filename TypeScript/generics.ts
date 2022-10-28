@@ -36,14 +36,28 @@ s2.getAll().map(event => event.code).forEach(event => {
 interface IResult<T> { 
   wasSuccessful: boolean; 
   error: T;
+  clone(): IResult<T>;
 }
 
 var response: IResult<string> = {
  wasSuccessful:true,
  error:"",
+ clone() {
+   var copy : IResult<string> = {
+     wasSuccessful:this.wasSuccessful,
+     error:this.error,
+     clone: this.clone,
+   }
+   return copy;
+ },
 }
 var error: string = response.error;
+var copy: IResult<string> = response.clone();
 console.log(error);
+console.log(copy);
+copy.wasSuccessful = false;
+copy.error = "error";
+console.log(copy.clone());
 
 interface IRunnable<T, U> { 
   run(input: T): U; 
@@ -58,3 +72,5 @@ var runnable: IRunnable<string, number> = {
 var input:string = "Input";
 var result: number = runnable.run(input);
 console.log(result);
+
+
