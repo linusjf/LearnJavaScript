@@ -135,4 +135,32 @@ class SomeClass {
   } 
 }
 
+class AutoMobile { 
+  name:string; 
+  engineCapacity:string;
+  constructor(name:string,engineCapacity:string) {
+    this.name = name;
+    this.engineCapacity = engineCapacity;
+  }
 
+  describeCar() {
+    console.log(`${this.name} car comes with ${this.engineCapacity} displacement`);
+  }
+}
+
+new AutoMobile("Maruti Ciaz","1500cc").describeCar();
+
+class Honda extends AutoMobile {
+seatingCapacity:number;
+  constructor(name:string,engineCapacity:string,seatingCapacity:number) {
+  super(name,engineCapacity);
+  this.seatingCapacity = seatingCapacity;
+  }
+
+  describeHonda() {
+super.describeCar();
+console.log(`this car comes with seating capacity of ${this.seatingCapacity}`);
+  }
+}
+
+new Honda("honda jazz","1200cc",4).describeHonda();
