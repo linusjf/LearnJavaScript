@@ -73,4 +73,28 @@ var input:string = "Input";
 var result: number = runnable.run(input);
 console.log(result);
 
+class Result<T> implements IResult<T> { 
+  constructor(public wasSuccessful: boolean, public error: T) {
+  }
+  public clone (): IResult<T> { 
+  return new Result<T>(this.wasSuccessful, this.error); 
+  }
+}
+
+class StringResult implements IResult<string> { 
+  constructor(public wasSuccessful: boolean, public error: string) { 
+  } 
+  public clone (): IResult<string> { 
+    return new StringResult(this.wasSuccessful, this.error); 
+  } 
+}
+
+// Compiler infers T to string 
+let r1 = new Result(false, 'error: 42');
+// Compiler infers T to number 
+let r2 = new Result(false, 42); 
+//let r3 = new Result<string>(true, null); 
+// Explicitly set T to string 
+//let r4 = new Result<string>(true, 4); 
+// Compilation error because 4 is not a string
 
