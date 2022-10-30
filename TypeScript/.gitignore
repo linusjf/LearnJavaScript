@@ -1,2 +1,4 @@
 *.js
 errors.txt
+node_modules/**
+typings/**
