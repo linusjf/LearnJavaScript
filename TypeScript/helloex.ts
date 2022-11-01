@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 import {hello,helloES} from "./helloes";
 import defaultHello from "./helloes";
 import * as Bundle from "./helloes";

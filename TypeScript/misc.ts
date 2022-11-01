@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 var globalNum = 200; 
 // global variable 
 function myFunction():void { 

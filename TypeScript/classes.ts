@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 class Parent {
   static num:number;
   static func():void {

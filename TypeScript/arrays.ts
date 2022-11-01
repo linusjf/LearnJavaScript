@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 // create an array 
 var arr:string[ ] = ['A', 'B', 'C', 'D'];
 // access index 0 element 

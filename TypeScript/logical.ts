@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 var lx = true; 
 var ly = false; 
 var la = lx && ly;  

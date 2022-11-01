@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 // never type 
 var xn: never;
 var yn: never;

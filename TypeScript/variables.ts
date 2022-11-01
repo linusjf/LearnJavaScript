@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 var myBook:string = "Go in 8 Hours"; 
 var myScore:number = 100; 
 var myStory:boolean = true;

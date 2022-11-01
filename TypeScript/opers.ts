@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 var bookname:string = "Perl" + " in 8 Hours";
 console.log(bookname);
 var mark:number = -100;

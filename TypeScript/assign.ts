@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 var x:number = 20; 
 var y:number = 2;  
 x += y; 

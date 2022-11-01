@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 interface IRushable { 
   run(): void; 
 }

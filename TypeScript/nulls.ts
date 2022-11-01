@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 function getId(x: Element) { 
   return x.id; 
 }

@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 interface IPerson { 
   name: string; 
   age: number; 

@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 let myFavoritePet:"dog";
 myFavoritePet = "dog";
 type Species = "cat" | "dog" | "bird";

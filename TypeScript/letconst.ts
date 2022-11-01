@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 let num:number = 100; 
 // define a variable 
 console.log ( num ); 

@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 function addMetadataTarget(target: any) { 
   // Add some metadata 
   target.__customMetadata = {

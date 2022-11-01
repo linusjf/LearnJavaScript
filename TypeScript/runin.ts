@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 interface IRaceable<V,U> { 
   run(parameter: U): V; 
 } 

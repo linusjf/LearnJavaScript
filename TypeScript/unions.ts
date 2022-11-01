@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 function whatTime(hour:number|string, minute:number|string):string { 
   return hour+':'+minute; 
 }

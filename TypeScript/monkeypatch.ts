@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 interface String { 
   toCamelCase(): string;
   firstPart(): string;

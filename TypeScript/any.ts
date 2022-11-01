@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 var myVariable: any; 
 // myVariable is “any” type 
 myVariable = 100; 

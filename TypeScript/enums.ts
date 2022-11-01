@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 const enum NinjaActivity { 
   Espionage , 
   Sabotage, 

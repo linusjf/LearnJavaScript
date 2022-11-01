@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 // create a tuple 
 var tup = ["Score", 100, true]; 
 console.log( tup[0] );

@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 // @ts-nocheck
 class Enum { 
   constructor(protected value: string) {} 

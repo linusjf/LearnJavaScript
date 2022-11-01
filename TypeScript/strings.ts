@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 var obj1 = new String("Swift"); 
 var concobj2 = " in 8 Hours"; 
 var myStr = obj1 + concobj2; 

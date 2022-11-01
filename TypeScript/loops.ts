@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 for (var x = 0; x <= 4; x++) {     // repeat 4 times 
   console.log(x); 
 }

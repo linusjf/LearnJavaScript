@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 // define a function 
 function myFun() { 
   console.log("Very Good!")

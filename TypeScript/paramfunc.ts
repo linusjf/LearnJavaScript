@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 function foo(constructorFunc: { 
   new():any 
 }) { 

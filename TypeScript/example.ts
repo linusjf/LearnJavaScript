@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 type User = {
   name: string;
   age: number;
