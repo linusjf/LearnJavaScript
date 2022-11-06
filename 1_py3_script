@@ -1,6 +1,6 @@
-2022-11-06 06:37:18,126 [INFO @ script_host.py:setup:69] 22582 - install import hook/path
-2022-11-06 06:37:18,127 [INFO @ script_host.py:setup:74] 22582 - redirect sys.stdout and sys.stderr
-2022-11-06 06:37:20,252 [WARNING @ session.py:handler:200] 22582 - error response from request 'python_execute ['import clang', 1, 1]': Traceback (most recent call last):
+2022-11-06 06:40:19,347 [INFO @ script_host.py:setup:69] 22920 - install import hook/path
+2022-11-06 06:40:19,349 [INFO @ script_host.py:setup:74] 22920 - redirect sys.stdout and sys.stderr
+2022-11-06 06:40:20,632 [WARNING @ session.py:handler:200] 22920 - error response from request 'python_execute ['import clang', 1, 1]': Traceback (most recent call last):
   File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/pynvim/plugin/script_host.py", line 95, in python_execute
     exec(script, self.module.__dict__)
   File "<string>", line 1, in <module>
