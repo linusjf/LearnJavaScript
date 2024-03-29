@@ -145,3 +145,22 @@ const key = "z";
   console.log(a); // 1
   console.log(d); // 2
 }
+{
+  const numbers = [];
+  const obj = { a: 1, b: 2 };
+  ({ a: numbers[0], b: numbers[1] } = obj);
+  // The properties `a` and `b` are assigned to properties of `numbers`
+  console.log(numbers);
+}
+{
+  const [a = 1] = []; // a is 1
+  const { b = 2 } = { b: undefined }; // b is 2
+  const { c = 2 } = { c: null }; // c is null
+  console.log(a, b, c);
+}
+{
+  const { b = console.log("hey") } = { b: 2 };
+  // Does not log anything, because `b` is defined and there's no need
+  // to evaluate the default value.
+  console.log(b);
+}
