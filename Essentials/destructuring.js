@@ -265,3 +265,15 @@ const key = "z";
   ]);
   console.log(a, b); // [1, 2] [3, 4]
 }
+{
+  const obj = {
+    *[Symbol.iterator]() {
+      for (const v of [0, 1, 2, 3]) {
+        console.log(v);
+        yield v;
+      }
+    },
+  };
+  const [a, b] = obj; // Only logs 0 and 1
+  console.log(a, b);
+}
