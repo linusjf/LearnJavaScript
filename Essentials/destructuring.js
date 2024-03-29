@@ -231,3 +231,37 @@ const key = "z";
   const [a, b, ...[c, d]] = [1, 2, 3, 4];
   console.log(a, b, c, d); // 1 2 3 4
 }
+{
+  const [a, b, ...[c, d]] = [1, 2, 3, 4];
+  console.log(a, b, c, d); // 1 2 3 4
+}
+{
+  const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
+  console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
+}
+{
+  function parseProtocol(url) {
+    const parsedURL =
+      /^(?<protocol>\w+):\/\/(?<domain>[^/]+)\/(?<path>.*)$/.exec(url);
+    if (!parsedURL) {
+      return false;
+    }
+    console.log(parsedURL);
+    // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
+    const [, protocol, fullhost, fullpath] = parsedURL;
+    return protocol;
+  }
+  console.log(
+    parseProtocol("https://developer.mozilla.org/en-US/docs/Web/JavaScript"),
+  );
+  // "https"
+  console.log(parseProtocol("ftp://aeneas.mit.edu/"));
+}
+{
+  const [a, b] = new Map([
+    [1, 2],
+    [3, 4],
+  ]);
+  console.log(a, b); // [1, 2] [3, 4]
+}
