@@ -424,3 +424,24 @@ const key = "z";
   const { a, toFixed } = 1;
   console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
 }
+{
+  const props = [
+    { id: 1, name: "Fizz" },
+    { id: 2, name: "Buzz" },
+    { id: 3, name: "FizzBuzz" },
+  ];
+  const [, , { name }] = props;
+  console.log(name); // "FizzBuzz"
+}
+{
+  const obj = {
+    self: "123",
+    __proto__: {
+      prot: "456",
+    },
+  };
+  const { self, prot } = obj;
+
+  console.log(self); // "123"
+  console.log(prot); // "456"
+}
