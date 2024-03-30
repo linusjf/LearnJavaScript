@@ -313,3 +313,114 @@ const key = "z";
   console.log(aa); // 3
   console.log(bb); // 5
 }
+{
+  const user = {
+    id: 42,
+    displayName: "jdoe",
+    fullName: {
+      firstName: "Jane",
+      lastName: "Doe",
+    },
+  };
+  function userId({ id }) {
+    return id;
+  }
+  console.log(userId(user)); // 42
+  function userDisplayName({ displayName: dname }) {
+    return dname;
+  }
+  console.log(userDisplayName(user)); // "jdoe"
+  function whois({ displayName, fullName: { firstName: name } }) {
+    return `${displayName} is ${name}`;
+  }
+  console.log(whois(user)); // "jdoe is Jane"
+}
+{
+  function drawChart({
+    size = "big",
+    coords = { x: 0, y: 0 },
+    radius = 25,
+  } = {}) {
+    console.log(size, coords, radius);
+    // do some chart drawing
+  }
+
+  drawChart({
+    coords: { x: 18, y: 30 },
+    radius: 30,
+  });
+  drawChart();
+}
+{
+  const metadata = {
+    title: "Scratchpad",
+    translations: [
+      {
+        locale: "de",
+        localizationTags: [],
+        lastEdit: "2014-04-14T08:43:37",
+        url: "/de/docs/Tools/Scratchpad",
+        title: "JavaScript-Umgebung",
+      },
+    ],
+    url: "/en-US/docs/Tools/Scratchpad",
+  };
+
+  const {
+    title: englishTitle, // rename
+    translations: [
+      {
+        title: localeTitle, // rename
+      },
+    ],
+  } = metadata;
+
+  console.log(englishTitle); // "Scratchpad"
+  console.log(localeTitle); // "JavaScript-Umgebung"
+}
+{
+  const people = [
+    {
+      name: "Mike Smith",
+      family: {
+        mother: "Jane Smith",
+        father: "Harry Smith",
+        sister: "Samantha Smith",
+      },
+      age: 35,
+    },
+    {
+      name: "Tom Jones",
+      family: {
+        mother: "Norah Jones",
+        father: "Richard Jones",
+        brother: "Howard Jones",
+      },
+      age: 25,
+    },
+  ];
+
+  for (const {
+    name: n,
+    family: { father: f },
+  } of people) {
+    console.log(`Name: ${n}, Father: ${f}`);
+  }
+
+  // "Name: Mike Smith, Father: Harry Smith"
+  // "Name: Tom Jones, Father: Richard Jones"
+}
+{
+  const key = "z";
+  const { [key]: foo } = { z: "bar" };
+  console.log(foo); // "bar"
+}
+{
+  const foo = { "fizz-buzz": true };
+  const { "fizz-buzz": fizzBuzz } = foo;
+  console.log(fizzBuzz); // true
+}
+{
+  const { a, toFixed } = 1;
+  console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
+}
