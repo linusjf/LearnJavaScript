@@ -277,3 +277,39 @@ const key = "z";
   const [a, b] = obj; // Only logs 0 and 1
   console.log(a, b);
 }
+{
+  const obj = {
+    *[Symbol.iterator]() {
+      for (const v of [0, 1, 2, 3]) {
+        console.log(v);
+        yield v;
+      }
+    },
+  };
+  const [a, b, ...rest] = obj; // Logs 0 1 2 3
+  console.log(rest); // [2, 3] (an array)
+}
+{
+  const user = {
+    id: 42,
+    isVerified: true,
+  };
+
+  const { id, isVerified } = user;
+
+  console.log(id); // 42
+  console.log(isVerified); // true
+}
+{
+  const o = { p: 42, q: true };
+  const { p: foo, q: bar } = o;
+
+  console.log(foo); // 42
+  console.log(bar); // true
+}
+{
+  const { a: aa = 10, b: bb = 5 } = { a: 3 };
+
+  console.log(aa); // 3
+  console.log(bb); // 5
+}
