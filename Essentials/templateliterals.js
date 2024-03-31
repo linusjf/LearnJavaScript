@@ -84,5 +84,40 @@ console.log(t2Closure("Hello", { foo: "World" })); // "Hello World!"
 
 const t3Closure = template`I'm ${"name"}. I'm almost ${"age"} years old.`;
 // const t3Closure = template(["I'm ", ". I'm almost ", " years old."], "name", "age");
-console.log(t3Closure("foo", { name: "MDN", age: 30 })); // "I'm MDN. I'm almost 30 years old."
-console.log(t3Closure({ name: "MDN", age: 30 })); // "I'm MDN. I'm almost 30 years old."
+console.log(t3Closure("foo", { name: "MDN", age: 30 }));
+// "I'm MDN. I'm almost 30 years old."
+console.log(t3Closure({ name: "MDN", age: 30 }));
+// "I'm MDN. I'm almost 30 years old."
+const callHistory = [];
+
+function tag(strings, ...values) {
+  callHistory.push(strings);
+  // Return a freshly made object
+  return {};
+}
+
+function evaluateLiteral() {
+  return tag`Hello, ${"world"}!`;
+}
+
+console.log(evaluateLiteral() === evaluateLiteral()); // false; each time `tag` is called, it returns a new object
+console.log(evaluateLiteral());
+console.log(callHistory[0] === callHistory[1]); // true; all evaluations of the same tagged literal would pass in the same strings array
+console.log(callHistory[0], callHistory[1]);
+{
+  function tag(strings) {
+    console.log(strings.raw[0]);
+  }
+
+  tag`string text line 1 \n string text line 2`;
+  // Logs "string text line 1 \n string text line 2" ,
+  // including the two characters '\' and 'n'
+}
+const str = String.raw`Hi\n${2 + 3}!`;
+// "Hi\\n5!"
+
+console.log(str.length);
+// 6
+
+console.log(Array.from(str).join(","));
+// "H,i,\\,n,5,!"
