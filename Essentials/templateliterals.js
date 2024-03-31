@@ -121,3 +121,9 @@ console.log(str.length);
 
 console.log(Array.from(str).join(","));
 // "H,i,\\,n,5,!"
+function latex(str) {
+  return { cooked: str[0], raw: str.raw[0] };
+}
+
+console.log(latex`\unicode`);
+// { cooked: undefined, raw: "\\unicode" }
