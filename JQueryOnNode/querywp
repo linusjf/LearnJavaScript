@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 count=$(curl --silent 'https://public-api.wordpress.com/rest/v1.1/sites/quiteaquote.in/posts/?pretty=true&context=display&page=1&number=1&fields=title,content&category=thought%20for%20today&type=post&status=publish&post_ID=0' | jq '.found')
-# Generate a random number within a specific range
-rnd=$((1 + RANDOM % count))
+# Generate a random number using shuf
+rnd="$(shuf -i 1-"${count}" -n 1)"
 curl "https://public-api.wordpress.com/rest/v1.1/sites/quiteaquote.in/posts/?pretty=true&context=display&page=${rnd}&number=1&fields=title,content,ID&category=thought%20for%20today&type=post&status=publish&ID=0"
