@@ -8,7 +8,7 @@ XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const dom = new jsdom.JSDOM(`<!DOCTYPE html>
 <body>
 <h1 class="heading">
-    GeeksforGeeks
+    Quite A Quote
 </h1>
 </body>
 `);
