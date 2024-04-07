@@ -8,3 +8,9 @@ count=$(curl --silent 'https://public-api.wordpress.com/rest/v1.1/sites/quiteaqu
 rnd="$(shuf -i 1-"${count}" -n 1)"
 curl --silent "https://public-api.wordpress.com/rest/v1.1/sites/quiteaquote.in/posts/?pretty=true&context=display&page=${rnd}&number=1&fields=title,content,ID,short_URL,URL&category=thought%20for%20today&type=post&status=publish&ID=0" |
   jq ".posts[0] | .title,.content,.short_URL,.URL"
+cnt="$(curl --silent "https://public-api.wordpress.com/rest/v1.1/sites/quiteaquote.in/posts/?pretty=true&context=display&page=1&number=1&fields=found,title,content,ID,short_URL,URL&category=thought%20for%20today&type=post&status=publish&ID=0&after=20120101&before=20120131" |
+  jq ".found")"
+curl --silent "https://public-api.wordpress.com/rest/v1.1/sites/quiteaquote.in/posts/?pretty=true&context=display&page=${cnt}&number=1&fields=found,title,content,ID,short_URL,URL&category=thought%20for%20today&type=post&status=publish&ID=0&after=20120101&before=20120201" |
+  jq ".posts[0] | .title,.content,.short_URL,.URL"
+curl --silent "https://public-api.wordpress.com/rest/v1.1/sites/quiteaquote.in/posts/?pretty=true&context=display&page=1&number=1&fields=found,title,content,ID,short_URL,URL&category=thought%20for%20today&type=post&status=publish&ID=0&after=20120101&before=20120131" |
+  jq ".posts[0] | .title,.content,.short_URL,.URL"
