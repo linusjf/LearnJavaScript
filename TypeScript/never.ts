@@ -1,13 +1,13 @@
 #!/usr/bin/env ts-node
-// never type 
-var xn: never;
-var yn: never;
-var zn: number = 100;
-// correct ! 
+// never type
+let xn: never;
+let yn: never;
+const zn: number = 100;
+// correct !
 // @ts-ignore
-xn = zn; 
+xn = zn;
 // correct ! output: undefined
-console.log(xn); 
+console.log(xn);
 // error !
 // @ts-ignore
 xn = zn;

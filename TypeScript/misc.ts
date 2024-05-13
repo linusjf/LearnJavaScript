@@ -1,9 +1,9 @@
 #!/usr/bin/env ts-node
-var globalNum = 200; 
+const globalNum = 200; 
 // global variable 
 function myFunction():void { 
   // local variable 
-  var localNum = 100; 
+  const localNum = 100; 
   console.log("The local variable: " + localNum);
 } 
 console.log("The global variable: " + globalNum); 
@@ -20,7 +20,7 @@ class Automobile {
   }
 }
 
-var auto = new Automobile("limousine");
+const auto = new Automobile("limousine");
 console.log(auto.car);
 auto.drive();
 
@@ -39,5 +39,5 @@ class House extends Building {
   }
 }
 
-var obj2 = new House(1000);
+const obj2 = new House(1000);
 obj2.size();

@@ -1,0 +1,2 @@
+2023-07-19 12:46:46,703 [INFO @ script_host.py:setup:69] 30387 - install import hook/path
+2023-07-19 12:46:46,704 [INFO @ script_host.py:setup:74] 30387 - redirect sys.stdout and sys.stderr

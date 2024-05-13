@@ -1,12 +1,12 @@
 #!/usr/bin/env ts-node
-var lx = true; 
-var ly = false; 
-var la = lx && ly;  
-// false 
-console.log ( la );  
-var lb = lx || ly; 
-// true 
-console.log ( lb );  
-var lc =! lx; 
+const lx = true;
+const ly = false;
+const la = lx && ly;
 // false
-console.log ( lc );   
+console.log ( la );
+const lb = lx || ly;
+// true
+console.log ( lb );
+const lc =! lx;
+// false
+console.log ( lc );
