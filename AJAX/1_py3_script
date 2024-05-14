@@ -1,4 +1,2 @@
-2024-05-13 17:22:21,005 [INFO @ script_host.py:setup:69] 21078 - install import hook/path
-2024-05-13 17:22:21,005 [INFO @ script_host.py:setup:74] 21078 - redirect sys.stdout and sys.stderr
-2024-05-13 17:22:22,210 [WARNING @ base_events.py:_run_once:1931] 21078 - Executing <Handle _UnixReadPipeTransport._read_ready() created at /data/data/com.termux/files/usr/lib/python3.11/asyncio/selector_events.py:267> took 0.106 seconds
-2024-05-13 17:22:39,053 [WARNING @ base_events.py:_run_once:1931] 21078 - Executing <Handle _UnixReadPipeTransport._read_ready() created at /data/data/com.termux/files/usr/lib/python3.11/asyncio/selector_events.py:267> took 0.340 seconds
+2024-05-14 10:37:35,673 [INFO @ script_host.py:setup:69] 728 - install import hook/path
+2024-05-14 10:37:35,673 [INFO @ script_host.py:setup:74] 728 - redirect sys.stdout and sys.stderr
