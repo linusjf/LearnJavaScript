@@ -71,3 +71,33 @@ console.log(productMap);
 const laptop: Product = productMap[1];
 // Output: { id: 1, name: 'Laptop', price: 999 }
 console.log(laptop);
+
+const fruits: string[] =
+    [ "apple", "banana", "apple", "orange", "banana", "apple" ];
+
+type FruitCount = Record<string, number>;
+const fruitCounts: FruitCount = fruits.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1;
+  return acc;
+}, {} as FruitCount);
+
+/*
+Output:
+{
+  'apple': 3,
+  'banana': 2,
+  'orange': 1
+}
+*/
+console.log(fruitCounts);
+
+type MathFn = (_x: number) => number;
+const add5: MathFn = (x) => x + 5;
+const multiply3: MathFn = (x) => x * 3;
+const subtract2: MathFn = (x) => x - 2;
+
+const composedFunctions: (MathFn)[] = [ add5, multiply3, subtract2 ];
+
+const result: number = composedFunctions.reduce((acc, curr) => curr(acc), 10);
+// Output: 43
+console.log(result);
