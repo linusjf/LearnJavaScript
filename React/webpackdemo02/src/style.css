@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 600;
   src:
@@ -10,5 +10,5 @@
 .hello {
   background: url("./icon.jpg");
   color: red;
-  font-family: Montserrat, Tangerine;
+  font-family: Montserrat, Tangerine, sans-serif;
 }
