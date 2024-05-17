@@ -1,0 +1,3 @@
+2024-05-15 10:27:13,846 [INFO @ script_host.py:setup:69] 9412 - install import hook/path
+2024-05-15 10:27:13,846 [INFO @ script_host.py:setup:74] 9412 - redirect sys.stdout and sys.stderr
+2024-05-15 10:27:15,073 [WARNING @ base_events.py:_run_once:1931] 9412 - Executing <Handle _UnixReadPipeTransport._read_ready() created at /data/data/com.termux/files/usr/lib/python3.11/asyncio/selector_events.py:267> took 0.105 seconds
