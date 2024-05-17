@@ -1,4 +1,5 @@
 #!/usr/bin/env ts-node
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const numbers: number[] = [ 1, 2, 3, 4, 5 ];
 const sum: number = numbers.reduce((acc, curr) => acc + curr, 0);
 // Output: 15
@@ -101,3 +102,46 @@ const composedFunctions: (MathFn)[] = [ add5, multiply3, subtract2 ];
 const result: number = composedFunctions.reduce((acc, curr) => curr(acc), 10);
 // Output: 43
 console.log(result);
+
+interface State {
+  count: number;
+  todos: string[];
+}
+
+interface Action {
+  type: string;
+  payload?: any;
+}
+
+const initialState: State = {
+  count : 0,
+  todos : [] as string[],
+};
+
+const actions: Action[] = [
+  {type : "INCREMENT_COUNT"},
+  {type : "ADD_TODO", payload : "Learn Array.reduce()"},
+  {type : "INCREMENT_COUNT"},
+  {type : "ADD_TODO", payload : "Master TypeScript"},
+];
+
+const reducer = (state: State, action: Action): State => {
+  switch (action.type) {
+  case "INCREMENT_COUNT":
+    return {...state, count : state.count + 1};
+  case "ADD_TODO":
+    return {...state, todos : [...state.todos, action.payload ]};
+  default:
+    return state;
+  }
+};
+
+const finalState: State = actions.reduce(reducer, initialState);
+/*
+Output:
+{
+  count: 2,
+  todos: ['Learn Array.reduce()', 'Master TypeScript']
+}
+*/
+console.log(finalState);
