@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8" />
-        <script src="https://code.angularjs.org/1.6.9/angular.js">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://code.angularjs.org/1.6.9/angular.js">
         </script>
-		<title>Orderby</title>
-	</head>
-	<body>
-	<div data-ng-app="" data-ng-init="member=[{name: 'Clare'}, {name: 'Ella'}, {name: 'Andy'}, {name: 'Davy'}, {name: 'Betty'}]"> 
-    <table border="1">
-      <tr><th>Student Name</th></tr>
-      <tr data-ng-repeat="arr in member | orderBy:'name'"> 
-        <td data-ng-bind="arr.name"></td> 
-      </tr> 
-    </table>
-    <table border="1">
-      <tr><th>Student Name</th></tr>
-      <tr data-ng-repeat="arr in member | orderBy:'-name'"> 
-        <td data-ng-bind="arr.name"></td> 
-      </tr> 
-    </table>
-  </div>
-	</body>
+    <title>Orderby</title>
+  </head>
+  <body>
+    <div data-ng-app="" data-ng-init="member=[{name: 'Clare'}, {name: 'Ella'}, {name: 'Andy'}, {name: 'Davy'}, {name: 'Betty'}]">
+      <table border="1">
+        <tr>
+          <th>Student Name</th>
+        </tr>
+        <tr data-ng-repeat="arr in member | orderBy:'name'">
+          <td data-ng-bind="arr.name"></td>
+        </tr>
+      </table>
+      <table border="1">
+        <tr>
+          <th>Student Name</th>
+        </tr>
+        <tr data-ng-repeat="arr in member | orderBy:'-name'">
+          <td data-ng-bind="arr.name"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
 </html>

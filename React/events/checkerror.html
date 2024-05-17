@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
+  <head>
     <meta charset="UTF-8" />
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-		<title>Check Error</title>
-	</head>
-	<body>
-    <div id='root'></div>
-    <script type='text/babel'>
+    <title>Check Error</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
       class MyComponent extends React.Component {
       constructor(props) {
       super(props);
@@ -24,7 +24,7 @@
         if (!Number(val) && val !='') {
         err = <b>Please input number!</b>;
         }
-        else { 
+        else {
         this.setState({age:val});
         }
         this.setState({message:err});
@@ -42,5 +42,5 @@
   ReactDOM.render(<MyComponent/>,
   document.getElementById('root'));
   </script>
-	</body>
+  </body>
 </html>

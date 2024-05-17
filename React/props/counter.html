@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8" />
-		<title>Counter</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+  <head>
+    <meta charset="utf-8" />
+    <title>Counter</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-	</head>
-	<body>
-	<div id="show"></div> 
-  <script type="text/babel">
+  </head>
+  <body>
+    <div id="show"></div>
+    <script type="text/babel">
     class Counter extends React.Component {
     constructor() {
      super();
@@ -23,14 +23,14 @@
     render() {
        return (
        <div>
-       <button onClick={this.clickNum} > Click Me 
+       <button onClick={this.clickNum} > Click Me
        </button>
        <h2>The number of clicks is: {this.state.count} </h2>
        </div>);
       }
     }
-    ReactDOM.render( <Counter/>, 
-    document.getElementById('show')); 
+    ReactDOM.render( <Counter/>,
+    document.getElementById('show'));
   </script>
-	</body>
+  </body>
 </html>

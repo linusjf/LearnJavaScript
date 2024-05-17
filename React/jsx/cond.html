@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8" />
-		<title>Conditional JSX</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script>
+  <head>
+    <meta charset="utf-8" />
+    <title>Conditional JSX</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-	</head>
-	<body>
-    <div id="show"></div> 
-    <script type="text/babel"> 
-      var num = Math.floor(Math.random() * 40); 
-      ReactDOM.render( <div>{ num < 20 ? 'num < 20 ' : 'num > 20' }</div>, 
-    // if num < 20 is true, then returns 'num < 20' 
-    document.getElementById('show') ); 
-    </script>		
-	</body>
+  </head>
+  <body>
+    <div id="show"></div>
+    <script type="text/babel">
+      var num = Math.floor(Math.random() * 40);
+      ReactDOM.render( <div>{ num < 20 ? 'num < 20 ' : 'num > 20' }</div>,
+    // if num < 20 is true, then returns 'num < 20'
+    document.getElementById('show') );
+    </script>
+  </body>
 </html>

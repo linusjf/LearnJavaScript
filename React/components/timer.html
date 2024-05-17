@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8" />
-		<title>Timer</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+  <head>
+    <meta charset="utf-8" />
+    <title>Timer</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-	</head>
-	<body>
-	<div id="show"></div>
-  <script type="text/babel"> 
-    class Timer extends React.Component { 
-    constructor() { 
+  </head>
+  <body>
+    <div id="show"></div>
+    <script type="text/babel">
+    class Timer extends React.Component {
+    constructor() {
     // define a constructor
-    super(); 
-    // access anything of the parent class 
-    this.state = new Date(); 
-    // get current date & time 
-    } 
-    render() { 
-    return ( 
-    // return the specified content and style 
+    super();
+    // access anything of the parent class
+    this.state = new Date();
+    // get current date & time
+    }
+    render() {
+    return (
+    // return the specified content and style
     <h3>{ this.state.toGMTString() }
     </h3>
-    ); 
-    } 
-    } 
-    ReactDOM.render( <Timer />, 
-    // render the Timer Class 
-    document.getElementById('show') ); 
+    );
+    }
+    }
+    ReactDOM.render( <Timer />,
+    // render the Timer Class
+    document.getElementById('show') );
   </script>
-	</body>
+  </body>
 </html>

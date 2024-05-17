@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8" />
-		<title>Repeat</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Repeat</title>
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
-	</head>
-	<body>
-      <div data-ng-app=""  data-ng-init = "colors = ['Gray', 'Yellow', 'White', 'Black', 'Blue', 'Green', 'Red', 'Pink']">
-        <h3>Colors:</h3> 
-        <ol><li data-ng-repeat="myVar in colors"> 
-            <p data-ng-bind="myVar"></p>
-          </li></ol>
-          </div>
-	</body>
+  </head>
+  <body>
+    <div data-ng-app="" data-ng-init = "colors = ['Gray', 'Yellow', 'White', 'Black', 'Blue', 'Green', 'Red', 'Pink']">
+      <h3>Colors:</h3>
+      <ol>
+        <li data-ng-repeat="myVar in colors">
+          <p data-ng-bind="myVar"></p>
+        </li></ol>
+    </div>
+  </body>
 </html>

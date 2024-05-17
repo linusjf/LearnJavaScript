@@ -1,13 +1,14 @@
 @font-face {
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
-  src: url('./Montserrat-Black.otf') format('otf'),
-    url('./Montserrat-Bold.otf') format('otf');
+  src:
+    url("./Montserrat-Black.otf") format("otf"),
+    url("./Montserrat-Bold.otf") format("otf");
 }
 
 .hello {
   background: url("./icon.jpg");
   color: red;
-  font-family:"Montserrat","Tangerine";
+  font-family: Montserrat, Tangerine;
 }

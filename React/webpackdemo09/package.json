@@ -1,22 +1,22 @@
 {
-  "name": "webpackdemo9",
-    "sideEffects": false,
-  "version": "1.0.0",
-  "description": "TreeShaking",
-  "module": "src/index.js",
-  "scripts": {
-    "start": "webpack serve --open",
-    "watch": "webpack --watch",
-    "build": "webpack --config webpack.config.js --color"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "description": "TreeShaking",
   "devDependencies": {
     "css-loader": "6.7.1",
     "lodash": "4.17.21",
     "style-loader": "3.3.1",
     "webpack": "5.76.0",
     "webpack-cli": "4.10.0"
-  }
+  },
+  "keywords": [],
+  "license": "ISC",
+  "module": "src/index.js",
+  "name": "webpackdemo9",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --color",
+    "start": "webpack serve --open",
+    "watch": "webpack --watch"
+  },
+  "sideEffects": false,
+  "version": "1.0.0"
 }

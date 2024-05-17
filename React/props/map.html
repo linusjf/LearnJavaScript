@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-	<head>
+  <head>
     <meta charset="utf-8" />
-		<title>Map</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <title>Map</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-	</head>
-	<body>
-	<div id="show"></div> 
-  <script type="text/babel"> 
+  </head>
+  <body>
+    <div id="show"></div>
+    <script type="text/babel">
     const chars = ['A','B','C','D'];
     const letters = chars.map(
      (chars) => <div>{chars}</div>
     );
-    ReactDOM.render(<h3>{letters}</h3>, 
-    document.getElementById('show')); 
+    ReactDOM.render(<h3>{letters}</h3>,
+    document.getElementById('show'));
   </script>
-	</body>
+  </body>
 </html>

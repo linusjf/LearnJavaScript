@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-	<head>
+  <head>
     <meta charset="UTF-8" />
-		<title>Validity</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+    <title>Validity</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-	</head>
-	<body>
-    <div id='root'></div>
+  </head>
+  <body>
+    <div id="root"></div>
     <script type="text/babel">
       class MyComponent extends React.Component {
       constructor(props) {
@@ -19,11 +19,11 @@
       this.setState({id:event.target.value});
       }
       validate = (id) => {
-      if ('12345' == id) 
+      if ('12345' == id)
       return (
       <h4>Your id number is {id}</h4>
       );
-      else 
+      else
       return (
       <h4>Please enter your number!</h4>
       );

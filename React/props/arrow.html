@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8" />
-		<title>Events</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+  <head>
+    <meta charset="utf-8" />
+    <title>Events</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-	</head>
-	<body>
-	<div id="show"></div> 
-  <script type="text/babel"> 
+  </head>
+  <body>
+    <div id="show"></div>
+    <script type="text/babel">
     class Book extends React.Component {
       title = () => {
        alert("Perl in 8 hours")
       }
-      render() { 
+      render() {
       return ( <button onClick={this.title}> Click Me!</button> );
       }
     }
-    const element = <Book/>; 
-    ReactDOM.render( element, 
-    document.getElementById('show')); 
+    const element = <Book/>;
+    ReactDOM.render( element,
+    document.getElementById('show'));
   </script>
-	</body>
+  </body>
 </html>

@@ -1,20 +1,20 @@
 {
-  "name": "reactapp",
-  "version": "1.0.0",
+  "author": "",
   "description": "",
-  "main": "index.js",
-  "private": true,
-  "scripts": {
-   "start": "webpack serve --open",
-    "watch": "webpack --watch",
-    "build": "webpack --config webpack.config.js --mode development --color"
+  "devDependencies": {
+    "html-webpack-plugin": "5.5.0",
+    "webpack": "5.76.0",
+    "webpack-cli": "4.10.0"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
-  "devDependencies": {
-     "html-webpack-plugin": "5.5.0",
-     "webpack": "5.76.0",
-     "webpack-cli": "4.10.0"
-   }
+  "main": "index.js",
+  "name": "reactapp",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode development --color",
+    "start": "webpack serve --open",
+    "watch": "webpack --watch"
+  },
+  "version": "1.0.0"
 }

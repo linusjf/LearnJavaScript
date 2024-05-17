@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8" />
-		<title>Component</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js" ></script> 
+  <head>
+    <meta charset="utf-8" />
+    <title>Component</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-	</head>
-	<body>
-	<div id="show"></div>
-  <script type="text/babel"> 
-    class MyComponent extends React.Component {	
-// define a component by using a class  
-render() { 
-// component method 
+  </head>
+  <body>
+    <div id="show"></div>
+    <script type="text/babel">
+    class MyComponent extends React.Component {
+// define a component by using a class
+render() {
+// component method
 return <h3> Perl in 8 Hours </h3>; }
-} 
-// return specified content & style to the rendered element   
-const element = <MyComponent/>;   
-// set the component 
-ReactDOM.render( element, 
-// rendering this means to render MyComponent 
-document.getElementById('show')); 
+}
+// return specified content & style to the rendered element
+const element = <MyComponent/>;
+// set the component
+ReactDOM.render( element,
+// rendering this means to render MyComponent
+document.getElementById('show'));
   </script>
-	</body>
+  </body>
 </html>
