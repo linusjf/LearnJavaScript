@@ -145,3 +145,28 @@ Output:
 }
 */
 console.log(finalState);
+
+const nums: number[] = [ 1, 2, 3, 2, 4, 3, 5, 1, 6 ];
+
+const uniqueNumbers: number[] = nums.reduce((acc, curr) => {
+  if (!acc.includes(curr)) {
+    acc.push(curr);
+  }
+  return acc;
+}, [] as number[]);
+
+// Output: [1, 2, 3, 4, 5, 6]
+console.log(uniqueNumbers);
+
+const grades: number[] = [ 85, 90, 92, 88, 95 ];
+
+const average: number = grades.reduce((acc, curr, index, array) => {
+  acc += curr;
+  if (index === array.length - 1) {
+    return acc / array.length;
+  }
+  return acc;
+}, 0);
+
+// Output: 90
+console.log(average);
