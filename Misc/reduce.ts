@@ -30,7 +30,6 @@ const groupedByAge: GroupedByAge = people.reduce((acc, curr) => {
   return acc;
 }, {} as GroupedByAge);
 
-console.log(groupedByAge);
 /*
 Output:
 {
@@ -38,3 +37,37 @@ Output:
   '30': [{ name: 'Bob', age: 30 }, { name: 'Dave', age: 30 }]
 }
 */
+console.log(groupedByAge);
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+}
+
+const products: Product[] = [
+  {id : 1, name : "Laptop", price : 999},
+  {id : 2, name : "Phone", price : 699},
+  {id : 3, name : "Tablet", price : 499},
+];
+
+type ProductMap = Record<number, Product>;
+const productMap: ProductMap = products.reduce((acc, curr) => {
+  acc[curr.id] = curr;
+  return acc;
+}, {} as ProductMap);
+
+/*
+Output:
+{
+  '1': { id: 1, name: 'Laptop', price: 999 },
+  '2': { id: 2, name: 'Phone', price: 699 },
+  '3': { id: 3, name: 'Tablet', price: 499 }
+}
+*/
+console.log(productMap);
+
+// Accessing a product by ID
+const laptop: Product = productMap[1];
+// Output: { id: 1, name: 'Laptop', price: 999 }
+console.log(laptop);
