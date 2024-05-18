@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,15 +10,18 @@
   <body>
     <div id="show"></div>
     <script type="text/babel">
-    // define a component
-    function MyComponent(props) {
-    return <b>Scala in 8 Hours, {props.author}</b>; }
-    // 'props' receives the parameter
-    const element = < MyComponent author = "Ray Yao" />
-    // use MyComponent and pass the parameter 'author'
-    ReactDOM.render(element,
-    // the element to be rendered
-    document.getElementById('show') );
-  </script>
+      // define a component
+      function MyComponent(props) {
+        return <b>Scala in 8 Hours, {props.author}</b>;
+      }
+      // 'props' receives the parameter
+      const element = <MyComponent author="Ray Yao" />;
+      // use MyComponent and pass the parameter 'author'
+      ReactDOM.render(
+        element,
+        // the element to be rendered
+        document.getElementById("show")
+      );
+    </script>
   </body>
 </html>

@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Component</title>
     <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
     <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
-    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js">
-    </script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
   </head>
   <body>
     <div id="show"></div>
     <script type="text/babel">
-    // define a component
-    function MyComponent() {
-    return <b>Scala in 8 Hours</b>;
-    }
-    const element = < MyComponent />
-    // use the component
-    // the element to be rendered
-    ReactDOM.render(element,
-    document.getElementById('show'));
-  </script>
+      // define a component
+      function MyComponent() {
+        return <b>Scala in 8 Hours</b>;
+      }
+      const element = <MyComponent />;
+      // use the component
+      // the element to be rendered
+      ReactDOM.render(element, document.getElementById("show"));
+    </script>
   </body>
 </html>

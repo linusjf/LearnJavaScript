@@ -1,8 +1,12 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <meta charset="utf-8" />
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <title>Uppercase</title>
   </head>
   <body>
@@ -12,14 +16,16 @@
       <p>{{ str3 }}</p>
       <p>{{ str4 }}</p>
       <script>
-      var ourApp = angular.module('ourAngular', [ ]);
-      ourApp.controller('ourCtrl', function($scope) {
-        $scope.str1 = "javascript";
-        $scope.str2 = angular.uppercase($scope.str1); ;
-        $scope.str3 = "ANGULAR";
-        $scope.str4 = angular.lowercase($scope.str3);
-      });
-    </script>
+        <![CDATA[
+          var ourApp = angular.module('ourAngular', [ ]);
+          ourApp.controller('ourCtrl', function($scope) {
+            $scope.str1 = "javascript";
+            $scope.str2 = angular.uppercase($scope.str1); ;
+            $scope.str3 = "ANGULAR";
+            $scope.str4 = angular.lowercase($scope.str3);
+          });
+        ]]>
+      </script>
     </div>
   </body>
 </html>

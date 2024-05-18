@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,12 +10,17 @@
   <body>
     <div id="show"></div>
     <script type="text/babel">
-    // set up the style of the element
-    var element = {
-  fontSize: 18, fontFamily: 'arial black', color: 'blue', };
-  ReactDOM.render(<div style = { element }> Go in 8 Hours </div>,
-  // "style = { element }" applies the style to the element
-  document.getElementById('show'));
-  </script>
+      // set up the style of the element
+      var element = {
+        fontSize: 18,
+        fontFamily: "arial black",
+        color: "blue"
+      };
+      ReactDOM.render(
+        <div style={element}> Go in 8 Hours </div>,
+        // "style = { element }" applies the style to the element
+        document.getElementById("show")
+      );
+    </script>
   </body>
 </html>

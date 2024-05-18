@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -11,34 +11,28 @@
     <div id="root"></div>
     <script type="text/babel">
       class MyComponent extends React.Component {
-      constructor(props) {
-      super(props);
-      this.state = {id:''};
+        constructor(props) {
+          super(props);
+          this.state = { id: "" };
+        }
+        handleChange = (event) => {
+          this.setState({ id: event.target.value });
+        };
+        validate = (id) => {
+          if ("12345" == id) return <h4>Your id number is {id}</h4>;
+          else return <h4>Please enter your number!</h4>;
+        };
+        render() {
+          const valid = this.validate(this.state.id);
+          return (
+            <form>
+              <p>{valid}</p>
+              <input type="text" onChange={this.handleChange} />
+            </form>
+          );
+        }
       }
-      handleChange = (event) => {
-      this.setState({id:event.target.value});
-      }
-      validate = (id) => {
-      if ('12345' == id)
-      return (
-      <h4>Your id number is {id}</h4>
-      );
-      else
-      return (
-      <h4>Please enter your number!</h4>
-      );
-      }
-      render() {
-      const valid = this.validate(this.state.id);
-      return (
-      <form>
-      <p>{valid}</p>
-      <input type='text' onChange={this.handleChange}/>
-      </form>
-      );
-      }
-    }
-    ReactDOM.render(<MyComponent/>,document.getElementById('root'));
+      ReactDOM.render(<MyComponent />, document.getElementById("root"));
     </script>
   </body>
 </html>

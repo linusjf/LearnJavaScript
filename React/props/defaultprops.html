@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -11,24 +11,28 @@
     <div id="show"></div>
     <div id="default"></div>
     <script type="text/babel">
-    function Book( props ) {
-    // props receives the parameter
-    return <h3>{ props.title }</h3>;
-    }
-    Book.defaultProps = {
-    title: 'Shell Scripting in 8 Hours'
-    };
-    // return the specified content and style
-    const element = <Book title="Go in 8 Hours"/>;
-    /* call the function Book and pass paramenter " Go in 8 Hours " */
-    ReactDOM.render( element,
-    // render the element
-    document.getElementById('show'));
-    const elem = <Book />;
-    /* call the function Book and pass paramenter " Go in 8 Hours " */
-    ReactDOM.render( elem,
-    // render the element
-    document.getElementById('default'));
-  </script>
+      function Book(props) {
+        // props receives the parameter
+        return <h3>{props.title}</h3>;
+      }
+      Book.defaultProps = {
+        title: "Shell Scripting in 8 Hours"
+      };
+      // return the specified content and style
+      const element = <Book title="Go in 8 Hours" />;
+      /* call the function Book and pass paramenter " Go in 8 Hours " */
+      ReactDOM.render(
+        element,
+        // render the element
+        document.getElementById("show")
+      );
+      const elem = <Book />;
+      /* call the function Book and pass paramenter " Go in 8 Hours " */
+      ReactDOM.render(
+        elem,
+        // render the element
+        document.getElementById("default")
+      );
+    </script>
   </body>
 </html>

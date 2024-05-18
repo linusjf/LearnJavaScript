@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -9,12 +9,18 @@
   </head>
   <body>
     <div id="show"></div>
-    <script type = "text/babel">
-const element = <h2><i>Lua in 8 Hours</i></h2>; ReactDOM.render(
-// render function
-element,
-/* rendering this element means to render <h2><i>Lua in 8 Hours</i></h2> */
-document.getElementById('show') );
-</script>
+    <script type="text/babel">
+      const element = (
+        <h2>
+          <i>Lua in 8 Hours</i>
+        </h2>
+      );
+      ReactDOM.render(
+        // render function
+        element,
+        /* rendering this element means to render <h2><i>Lua in 8 Hours</i></h2> */
+        document.getElementById("show")
+      );
+    </script>
   </body>
 </html>

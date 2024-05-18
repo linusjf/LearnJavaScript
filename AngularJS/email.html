@@ -1,18 +1,23 @@
-<!DOCTYPE html>
-<html data-ng-app="">
+<!doctype html>
+<html data-ng-app="" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
     <meta charset="utf-8" />
     <title>Email</title>
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
   </head>
   <body>
-    <form name="myForm">
-      Please input your email address: <br />
-      <br />
-      <input type="email" name="addr" data-ng-model="data" />
+    <form id="myForm" name="myForm">
+      Please input your email address:
       <br />
       <br />
-      <div data-ng-show="myForm.addr.$error.email"> Invalid email address!</div>
+      <input data-ng-model="data" name="addr" type="email" />
+      <br />
+      <br />
+      <div data-ng-show="myForm.addr.$error.email">Invalid email address!</div>
     </form>
   </body>
 </html>

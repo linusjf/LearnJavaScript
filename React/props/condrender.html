@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,22 +10,18 @@
   <body>
     <div id="show"></div>
     <script type="text/babel">
-  function Success() {
-  return <h3> You have logged in successfully!
-  </h3>
-  }
-  function Failure() {
-   return <h3> First sign up before log in!
-     </h3>
-  }
-  function CheckIn() {
-   var isLoggedIn = Math.random() < 0.5;
-   if (isLoggedIn)
-    return <Success/>;
-   return <Failure/>;
-  }
-  ReactDOM.render(<CheckIn/>,
-  document.getElementById('show'))
-</script>
+      function Success() {
+        return <h3> You have logged in successfully!</h3>;
+      }
+      function Failure() {
+        return <h3> First sign up before log in!</h3>;
+      }
+      function CheckIn() {
+        var isLoggedIn = Math.random() < 0.5;
+        if (isLoggedIn) return <Success />;
+        return <Failure />;
+      }
+      ReactDOM.render(<CheckIn />, document.getElementById("show"));
+    </script>
   </body>
 </html>

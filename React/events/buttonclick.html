@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,23 +10,28 @@
   <body>
     <div id="show" />
     <script type="text/babel">
-  class Book extends React.Component {
-    constructor(props) {
-    super(props);
-    this.state = {value:'C# in 8 hours',oldValue:'Shell Scripting in 8 hours',togVal:''};
-    }
-    handleClick = (event) => {
-     this.setState({value:this.state.oldValue});
-    }
-  render() {
-return (
-<div>
-<button onClick={this.handleClick}>Click Me!</button>
-<h3>{this.state.value}</h3>
-</div>
-);}}
-ReactDOM.render( <Book />,
-document.getElementById('show'));
-</script>
+      class Book extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            value: "C# in 8 hours",
+            oldValue: "Shell Scripting in 8 hours",
+            togVal: ""
+          };
+        }
+        handleClick = (event) => {
+          this.setState({ value: this.state.oldValue });
+        };
+        render() {
+          return (
+            <div>
+              <button onClick={this.handleClick}>Click Me!</button>
+              <h3>{this.state.value}</h3>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<Book />, document.getElementById("show"));
+    </script>
   </body>
 </html>

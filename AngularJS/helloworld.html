@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html data-ng-app>
+<!doctype html>
+<html data-ng-app="" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
     <meta charset="UTF-8" />
     <title>HelloWorld</title>
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
   </head>
   <body>
     <br />
-    <label>Greeting: </label>
-    <input type = "text" data-ng-model = "str" placeholder = "Please input Hello World." />
+    <label>Greeting:</label>
+    <input
+      data-ng-model="str"
+      placeholder="Please input Hello World."
+      type="text"
+    />
     <br />
     <h4>{{str}}</h4>
   </body>

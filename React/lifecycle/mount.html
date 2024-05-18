@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,27 +10,24 @@
   <body>
     <div id="show" />
     <script type="text/babel">
-  class Enjoyment extends React.Component {
-    constructor(props) {
-    super(props);
-    this.state = {fruit1:"apple"};
-    }
-    componentDidMount() {
-setTimeout(() => {
- this.setState({fruit1: 'banana'})},
- 2000)
-setTimeout(() => {
- this.setState({fruit1: 'orange'})},
- 1000)
-}
-  render() {
-    return (
-    <h3> His favorite fruit is {this.state.fruit1} </h3>
-    );
-    }
-    }
-    ReactDOM.render( <Enjoyment />,
-    document.getElementById('show'));
-  </script>
+      class Enjoyment extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { fruit1: "apple" };
+        }
+        componentDidMount() {
+          setTimeout(() => {
+            this.setState({ fruit1: "banana" });
+          }, 2000);
+          setTimeout(() => {
+            this.setState({ fruit1: "orange" });
+          }, 1000);
+        }
+        render() {
+          return <h3> His favorite fruit is {this.state.fruit1} </h3>;
+        }
+      }
+      ReactDOM.render(<Enjoyment />, document.getElementById("show"));
+    </script>
   </body>
 </html>

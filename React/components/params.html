@@ -1,26 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Params</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script> 
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script> 
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
   </head>
   <body>
-    <div id="show"></div> 
-    <script type="text/babel"> 
-    class MyComponent extends React.Component {
-render() { 
-// component method 
-return <b>Perl in 8 Hours, { this.props.author }</b>; } 
-// “this.props.author” receives the parameter 
-} 
-const element = < MyComponent  author = "Ray Yao" /> 
-// “author = “Ray Yao”” is a parameter to pass 
-ReactDOM.render( element,  
-// rendering this means to render MyComponent 
-document.getElementById('show') ); 
-  </script>
+    <div id="show"></div>
+    <script type="text/babel">
+      class MyComponent extends React.Component {
+        render() {
+          // component method
+          return <b>Perl in 8 Hours, {this.props.author}</b>;
+        }
+        // “this.props.author” receives the parameter
+      }
+      const element = <MyComponent author="Ray Yao" />;
+      // “author = “Ray Yao”” is a parameter to pass
+      ReactDOM.render(
+        element,
+        // rendering this means to render MyComponent
+        document.getElementById("show")
+      );
+    </script>
   </body>
 </html>

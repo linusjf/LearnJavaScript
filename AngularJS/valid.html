@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html data-ng-app="">
+<!doctype html>
+<html data-ng-app="" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
     <meta charset="utf-8" />
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
-    <style>input.ng-valid{ background-color: yellow; }</style>
+    <style>
+      <![CDATA[
+      input.ng-valid{ background-color: yellow; }
+      ]]>
+    </style>
     <title>Valid</title>
   </head>
   <body>
     <form>
-      Please input your number:<br />
-      <input data-text="num" type="number" data-ng-model="psw" required />
+      Please input your number:
+      <br />
+      <input data-ng-model="psw" data-text="num" required="" type="number" />
     </form>
   </body>
 </html>

@@ -1,8 +1,12 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <meta charset="utf-8" />
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <title>Isnumber</title>
   </head>
   <body>
@@ -10,11 +14,13 @@
       <p>{{ str1 }}</p>
       <p>{{ str2 }}</p>
       <script>
-      var ourApp = angular.module('ourAngular', [ ]);
-      ourApp.controller('ourCtrl', function($scope) {
-      $scope.str1 = " Is the 'JavaScript' a number?";
-      $scope.str2 = angular.isNumber($scope.str1); });
-    </script>
+        <![CDATA[
+          var ourApp = angular.module('ourAngular', [ ]);
+          ourApp.controller('ourCtrl', function($scope) {
+          $scope.str1 = " Is the 'JavaScript' a number?";
+          $scope.str2 = angular.isNumber($scope.str1); });
+        ]]>
+      </script>
     </div>
   </body>
 </html>

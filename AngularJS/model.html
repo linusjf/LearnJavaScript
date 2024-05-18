@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
     <meta charset="UTF-8" />
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <title>Model</title>
   </head>
   <body>
     <div data-ng-app="">
-      <p>Please enter your name: <br />
-        <input type="text" data-ng-model="myVar" />
+      <p>
+        Please enter your name:
+        <br />
+        <input data-ng-model="myVar" type="text" />
       </p>
       <p data-ng-bind="myVar"></p>
       <p>{{myVar}}</p>

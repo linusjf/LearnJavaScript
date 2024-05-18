@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,34 +10,33 @@
   <body>
     <div id="show"></div>
     <script type="text/babel">
-        class SubmitForm extends React.Component {
+      class SubmitForm extends React.Component {
         constructor(props) {
-        super(props);
-        this.state = {name:''};
-      //  this.handleChange = this.handleChange.bind(this);
-       // this.handleSubmit = this.handleSubmit.bind(this);
+          super(props);
+          this.state = { name: "" };
+          //  this.handleChange = this.handleChange.bind(this);
+          // this.handleSubmit = this.handleSubmit.bind(this);
         }
         handleChange = (event) => {
-        this.setState({name:event.target.value});
-        }
+          this.setState({ name: event.target.value });
+        };
         handleSubmit = (event) => {
-         event.preventDefault();
-         var msg = 'Dear ' + this.state.name + ', Thank you!';
-         alert(msg);
-        }
+          event.preventDefault();
+          var msg = "Dear " + this.state.name + ", Thank you!";
+          alert(msg);
+        };
         render() {
-        return (
-        <form onSubmit={this.handleSubmit}>
-        <p>Please input your name:</p>
-        <input type='text' onChange={this.handleChange}/>
-        <input type='submit'></input>
-        <h2>Your name is: {this.state.name}</h2>
-        </form>
-        );
+          return (
+            <form onSubmit={this.handleSubmit}>
+              <p>Please input your name:</p>
+              <input type="text" onChange={this.handleChange} />
+              <input type="submit"></input>
+              <h2>Your name is: {this.state.name}</h2>
+            </form>
+          );
         }
       }
-      ReactDOM.render( <SubmitForm />,
-      document.getElementById('show'));
-      </script>
+      ReactDOM.render(<SubmitForm />, document.getElementById("show"));
+    </script>
   </body>
 </html>

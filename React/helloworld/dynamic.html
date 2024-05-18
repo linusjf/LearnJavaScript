@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -11,20 +11,17 @@
     <div id="show"></div>
     <script type="text/babel">
       function timer() {
-      // timer() is called per 1000 milliseconds
-      // set an element to be rendered
-      const element = (
-      <h2>It is {new Date().toLocaleTimeString()} now.</h2>
-      );
-      // {new Date().toLocaleTimeString()} gets local time
-      // define a render function element,
-      /*  render this element means to render <h2>It is {new Date().toLocaleTimeString()} now.</h2>  */
-      /* show the content in the tag where id =" show"  */
-      ReactDOM.render(element,
-      document.getElementById('show'));
+        // timer() is called per 1000 milliseconds
+        // set an element to be rendered
+        const element = <h2>It is {new Date().toLocaleTimeString()} now.</h2>;
+        // {new Date().toLocaleTimeString()} gets local time
+        // define a render function element,
+        /*  render this element means to render <h2>It is {new Date().toLocaleTimeString()} now.</h2>  */
+        /* show the content in the tag where id =" show"  */
+        ReactDOM.render(element, document.getElementById("show"));
       }
       // run timer() per 1000 milliseconds
       setInterval(timer, 1000);
-  </script>
+    </script>
   </body>
 </html>

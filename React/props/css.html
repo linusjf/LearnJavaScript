@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,18 +10,21 @@
   <body>
     <div id="show"></div>
     <script type="text/babel">
-    class MyComponent extends React.Component {
-    render() {
-       return (
-       <div>
-       <h2 style={{color:"blue"}}>Programming book: </h2>
-       <h3><i><u>Shell scripting in 8 hours!</u></i></h3>
-       </div>
-       );
+      class MyComponent extends React.Component {
+        render() {
+          return (
+            <div>
+              <h2 style={{ color: "blue" }}>Programming book: </h2>
+              <h3>
+                <i>
+                  <u>Shell scripting in 8 hours!</u>
+                </i>
+              </h3>
+            </div>
+          );
+        }
       }
-    }
-    ReactDOM.render( <MyComponent />,
-    document.getElementById('show'));
-  </script>
+      ReactDOM.render(<MyComponent />, document.getElementById("show"));
+    </script>
   </body>
 </html>

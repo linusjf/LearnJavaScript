@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <script src="https://code.angularjs.org/1.6.9/angular.js">
-    </script>
     <meta charset="utf-8" />
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <title>Currfilter</title>
   </head>
   <body>
-    <div data-ng-app="" data-ng-init = "statement =[{name: 'Jay', salary:8100}, {name: 'Sdwt', salary:7000}, {name: 'Hao', salary:9000}, {name: 'Luoe', salary:6300}, {name: 'Fin', salary:9800}]">
+    <div
+      data-ng-app=""
+      data-ng-init="statement =[{name: &#39;Jay&#39;, salary:8100}, {name: &#39;Sdwt&#39;, salary:7000}, {name: &#39;Hao&#39;, salary:9000}, {name: &#39;Luoe&#39;, salary:6300}, {name: &#39;Fin&#39;, salary:9800}]"
+    >
       <table border="1">
         <tr>
           <th>Employee name</th>
           <th>Employee Income</th>
         </tr>
         <tr data-ng-repeat="s in statement">
-          <td data-ng-bind="s.name "></td>
-          <td data-ng-bind="s.salary | currency "></td>
+          <td data-ng-bind="s.name"></td>
+          <td data-ng-bind="s.salary | currency"></td>
         </tr>
       </table>
     </div>

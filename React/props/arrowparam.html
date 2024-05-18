@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,17 +10,21 @@
   <body>
     <div id="show"></div>
     <script type="text/babel">
-    class Book extends React.Component {
-      title = (props) => {
-       alert(props + " in 8 hours")
+      class Book extends React.Component {
+        title = (props) => {
+          alert(props + " in 8 hours");
+        };
+        render() {
+          return (
+            <button onClick={this.title.bind(this, "Django")}>
+              {" "}
+              Click Me!
+            </button>
+          );
+        }
       }
-      render() {
-      return ( <button onClick={this.title.bind(this, "Django")}> Click Me!</button> );
-      }
-    }
-    const element = <Book/>;
-    ReactDOM.render( element,
-    document.getElementById('show'));
-  </script>
+      const element = <Book />;
+      ReactDOM.render(element, document.getElementById("show"));
+    </script>
   </body>
 </html>

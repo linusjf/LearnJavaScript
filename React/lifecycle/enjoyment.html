@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,19 +10,16 @@
   <body>
     <div id="show" />
     <script type="text/babel">
-  class Enjoyment extends React.Component {
-    constructor(props) {
-    super(props);
-    this.state = {fruit:"apple"};
-    }
-    render() {
-    return (
-    <h3> His favorite fruit is {this.state.fruit} </h3>
-    );
-    }
-    }
-    ReactDOM.render( <Enjoyment />,
-    document.getElementById('show'));
-  </script>
+      class Enjoyment extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { fruit: "apple" };
+        }
+        render() {
+          return <h3> His favorite fruit is {this.state.fruit} </h3>;
+        }
+      }
+      ReactDOM.render(<Enjoyment />, document.getElementById("show"));
+    </script>
   </body>
 </html>

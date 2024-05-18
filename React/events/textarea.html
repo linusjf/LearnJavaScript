@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -11,24 +11,24 @@
     <div id="root"></div>
     <script type="text/babel">
       class MyComponent extends React.Component {
-      constructor(props) {
-      super(props);
-      this.state = {description:''};
+        constructor(props) {
+          super(props);
+          this.state = { description: "" };
+        }
+        handle = (event) => {
+          this.setState({ description: event.target.value });
+        };
+        render() {
+          return (
+            <form>
+              <p>Please input your description</p>
+              <textarea onChange={this.handle} />
+              <h2>Your description is {this.state.description}</h2>
+            </form>
+          );
+        }
       }
-      handle = (event) => {
-      this.setState({description:event.target.value});
-      }
-      render() {
-      return (
-      <form>
-      <p>Please input your description</p>
-      <textarea onChange={this.handle}/>
-      <h2>Your description is {this.state.description}</h2>
-      </form>
-      );
-      }
-    }
-    ReactDOM.render(<MyComponent/>,document.getElementById('root'));
+      ReactDOM.render(<MyComponent />, document.getElementById("root"));
     </script>
   </body>
 </html>

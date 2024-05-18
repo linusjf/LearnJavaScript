@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html data-ng-app="">
+<!doctype html>
+<html data-ng-app="" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <meta charset="utf-8" />
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <title>Expression</title>
   </head>
   <body>
-    Book1:
-    <input type="number" data-ng-model="price1" />
-    <br /> Book2:
-    <input type="number" data-ng-model="price2" />
-    <br /> Book3:
-    <input type="number" data-ng-model="price3" />
+    Book1: <input data-ng-model="price1" type="number" />
     <br />
-    <p><b>Sum:</b> ${{ price1 + price2 + price3 }} </p>
+    Book2: <input data-ng-model="price2" type="number" />
+    <br />
+    Book3: <input data-ng-model="price3" type="number" />
+    <br />
+    <p><b>Sum:</b> ${{ price1 + price2 + price3 }}</p>
   </body>
 </html>

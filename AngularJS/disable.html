@@ -1,14 +1,18 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
     <meta charset="utf-8" />
     <title>Disable</title>
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
   </head>
   <body>
     <div data-ng-app="">
-      <input type="checkbox" data-ng-model="DisBox" />Disable Box
-      <p><input type="button" data-ng-disabled="DisBox" value="Button" /></p>
+      <input data-ng-model="DisBox" type="checkbox" />Disable Box
+      <p><input data-ng-disabled="DisBox" type="button" value="Button" /></p>
     </div>
   </body>
 </html>

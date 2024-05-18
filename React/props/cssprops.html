@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,23 +10,27 @@
   <body>
     <div id="show"></div>
     <script type="text/babel">
-    class MyComponent extends React.Component {
-    render() {
-    const newstyle = {
-    color:"green",
-    fontFace:"bold",
-    fontFamily:"New Times Roman",
-    backgroundColor:"yellow",
-    };
-    return (
-    <div>
-    <h2 style={newstyle}>Programming book: </h2>
-    <h3><i><u>Type script in 8 hours!</u></i></h3>
-    </div>);
-    }
-  }
-  ReactDOM.render( <MyComponent />,
-  document.getElementById('show'));
-  </script>
+      class MyComponent extends React.Component {
+        render() {
+          const newstyle = {
+            color: "green",
+            fontFace: "bold",
+            fontFamily: "New Times Roman",
+            backgroundColor: "yellow"
+          };
+          return (
+            <div>
+              <h2 style={newstyle}>Programming book: </h2>
+              <h3>
+                <i>
+                  <u>Type script in 8 hours!</u>
+                </i>
+              </h3>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<MyComponent />, document.getElementById("show"));
+    </script>
   </body>
 </html>
