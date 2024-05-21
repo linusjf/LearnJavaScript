@@ -15,14 +15,15 @@
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
   </head>
   <body>
-    <form id="myForm" name="myForm">
-      Please input your email address:
+    <form id="my-form" name="my-form">
+      <label for="email">Please input your email address:</label>
       <br />
       <br />
-      <input data-ng-model="data" name="addr" type="email" />
+      <input data-ng-model="data" name="addr" type="email" id="email" />
       <br />
       <br />
-      <div data-ng-show="myForm.addr.$error.email">Invalid email address!</div>
+      <div data-ng-show="my-form.addr.$error.email">Invalid email address!</div>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>

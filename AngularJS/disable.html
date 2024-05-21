@@ -11,8 +11,15 @@
   </head>
   <body>
     <div data-ng-app="">
-      <input data-ng-model="DisBox" type="checkbox" />Disable Box
-      <p><input data-ng-disabled="DisBox" type="button" value="Button" /></p>
+      <input id="disbox" data-ng-model="DisBox" type="checkbox" /><label
+        for="disbox"
+        >Disable Box</label
+      >
+      <p>
+        <button data-ng-disabled="DisBox" type="button" value="Button">
+          Button
+        </button>
+      </p>
     </div>
   </body>
 </html>
