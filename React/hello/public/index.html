@@ -14,11 +14,11 @@
     <title>Hello, React!</title>
     <script
       src="https://unpkg.com/react@17/umd/react.development.js"
-      crossorigin
+      crossorigin="crossorigin"
     ></script>
     <script
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
-      crossorigin
+      crossorigin="crossorigin"
     ></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
@@ -28,7 +28,7 @@
     <div id="root"></div>
     <div id="main"></div>
     <div id="hello"></div>
-    <script type="text/javascript">
+    <script type="text/babel">
       // create a React element rElement
       var rElement = React.createElement("h1", null, "Hello, world!");
       // dElement is a DOM container

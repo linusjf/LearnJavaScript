@@ -19,13 +19,17 @@
       data-ng-copy="copyResult=true"
       data-ng-init="copyResult=false; val1=&#39;please copy me&#39;"
       data-ng-model="val1"
+      id="copy-result"
+      type="text"
     />
-    <p>copy status: {{copyResult}}</p>
+    <p><label for="copy-result">copy status: {{copyResult}}</label></p>
     <input
       data-ng-cut="cutResult=true"
       data-ng-init="cutResult=false; val2=&#39;please cut me&#39;"
       data-ng-model="val2"
+      id="cut-result"
+      type="text"
     />
-    <p>cut status: {{cutResult}}</p>
+    <p><label for="cut-result">cut status: {{cutResult}}</label></p>
   </body>
 </html>

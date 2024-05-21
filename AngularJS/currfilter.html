@@ -15,14 +15,16 @@
       data-ng-init="statement =[{name: &#39;Jay&#39;, salary:8100}, {name: &#39;Sdwt&#39;, salary:7000}, {name: &#39;Hao&#39;, salary:9000}, {name: &#39;Luoe&#39;, salary:6300}, {name: &#39;Fin&#39;, salary:9800}]"
     >
       <table border="1">
-        <tr>
-          <th>Employee name</th>
-          <th>Employee Income</th>
-        </tr>
-        <tr data-ng-repeat="s in statement">
-          <td data-ng-bind="s.name"></td>
-          <td data-ng-bind="s.salary | currency"></td>
-        </tr>
+        <tbody>
+          <tr>
+            <th scope="col">Employee name</th>
+            <th scope="col">Employee Income</th>
+          </tr>
+          <tr data-ng-repeat="s in statement">
+            <td data-ng-bind="s.name"></td>
+            <td data-ng-bind="s.salary | currency"></td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </body>
