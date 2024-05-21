@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("getMessage").onclick = function () {
+  document.getElementById("get-message").onclick = function () {
     const req = new XMLHttpRequest();
 
     req.open("GET", "/json/cats.json", true);

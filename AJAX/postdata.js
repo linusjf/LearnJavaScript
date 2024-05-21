@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("sendMessage").onclick = function () {
+  document.getElementById("send-message").onclick = function () {
     const userName = document.getElementById("name").value;
     const url = "https://jsonplaceholder.typicode.com/posts";
     // Add your code below this line

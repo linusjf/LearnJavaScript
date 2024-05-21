@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("getMessage").onclick = () => {
+  document.getElementById("get-message").onclick = () => {
     console.log("Clicked!");
   };
 });

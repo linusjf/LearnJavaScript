@@ -11,13 +11,15 @@
   </head>
   <body>
     <div data-ng-app="" data-ng-init="num1=57; num2=23">
-      <p>1st Number: <input data-ng-model="num1" type="number" /></p>
-      <p>2nd Number: <input data-ng-model="num2" type="number" /></p>
-      <button data-ng-click="result = num1 + num2">Single Click</button>
-      <h4>Sum:</h4>
+      <label>1st Number: <input data-ng-model="num1" type="number" /></label>
+      <label>2nd Number: <input data-ng-model="num2" type="number" /></label>
+      <button data-ng-click="result = num1 + num2" type="button">
+        Single Click
+      </button>
+      <h1>Sum:</h1>
       <p data-ng-bind="result"></p>
       <button data-ng-dblclick="res = num1 - num2">Double Click</button>
-      <h4>Diff:</h4>
+      <h1>Diff:</h1>
       <p data-ng-bind="res"></p>
     </div>
   </body>

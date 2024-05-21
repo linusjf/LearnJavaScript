@@ -3,4 +3,5 @@
 **/build/**
 **/commit.txt
 tidy.out
+lint.out
 **/1_py3_script
