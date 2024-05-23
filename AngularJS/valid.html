@@ -13,17 +13,25 @@
     <meta charset="utf-8" />
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <style>
-      <![CDATA[
-      input.ng-valid{ background-color: yellow; }
-      ]]>
+      input.ng-valid {
+        background-color: yellow;
+      }
     </style>
     <title>Valid</title>
   </head>
   <body>
     <form>
-      Please input your number:
-      <br />
-      <input data-ng-model="psw" data-text="num" required="" type="number" />
+      <label>
+        Please input your number:
+        <br />
+        <input
+          data-ng-model="psw"
+          data-text="num"
+          required="required"
+          type="number"
+        />
+      </label>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>

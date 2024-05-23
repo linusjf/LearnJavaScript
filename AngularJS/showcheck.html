@@ -8,11 +8,13 @@
     />
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <title>Showcheck</title>
+    <link href="./showcheck.css" rel="stylesheet" />
   </head>
   <body>
     <div data-ng-app="">
-      <input data-ng-model="ChBox" type="checkbox" />Check Box
-      <div data-ng-show="ChBox" style="background-color: yellow; height: 70px">
+      <input data-ng-model="ChBox" type="checkbox" aria-label="checkbox" />Check
+      Box
+      <div data-ng-show="ChBox" class="showcheck">
         <p>I appear when the check box is checked.</p>
         <p>I disappear when the check box is unchecked.</p>
       </div>

@@ -16,13 +16,15 @@
       <p>{{ str3 }}</p>
       <p>{{ str4 }}</p>
       <script>
-        var ourApp = angular.module("ourAngular", []);
-        ourApp.controller("ourCtrl", function ($scope) {
-          $scope.str1 = "javascript";
-          $scope.str2 = angular.uppercase($scope.str1);
-          $scope.str3 = "ANGULAR";
-          $scope.str4 = angular.lowercase($scope.str3);
-        });
+        <![CDATA[
+            var ourApp = angular.module("ourAngular", []);
+            ourApp.controller("ourCtrl", function ($scope) {
+              $scope.str1 = "javascript";
+              $scope.str2 = angular.uppercase($scope.str1);
+              $scope.str3 = "ANGULAR";
+              $scope.str4 = angular.lowercase($scope.str3);
+            });
+        ]]>
       </script>
     </div>
   </body>

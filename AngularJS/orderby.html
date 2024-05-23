@@ -15,20 +15,24 @@
       data-ng-init="member=[{name: &#39;Clare&#39;}, {name: &#39;Ella&#39;}, {name: &#39;Andy&#39;}, {name: &#39;Davy&#39;}, {name: &#39;Betty&#39;}]"
     >
       <table border="1">
-        <tr>
-          <th>Student Name</th>
-        </tr>
-        <tr data-ng-repeat="arr in member | orderBy:&#39;name&#39;">
-          <td data-ng-bind="arr.name"></td>
-        </tr>
+        <tbody>
+          <tr>
+            <th scope="col">Student Name</th>
+          </tr>
+          <tr data-ng-repeat="arr in member | orderBy:&#39;name&#39;">
+            <td data-ng-bind="arr.name"></td>
+          </tr>
+        </tbody>
       </table>
       <table border="1">
-        <tr>
-          <th>Student Name</th>
-        </tr>
-        <tr data-ng-repeat="arr in member | orderBy:&#39;-name&#39;">
-          <td data-ng-bind="arr.name"></td>
-        </tr>
+        <tbody>
+          <tr>
+            <th scope="col">Student Name</th>
+          </tr>
+          <tr data-ng-repeat="arr in member | orderBy:&#39;-name&#39;">
+            <td data-ng-bind="arr.name"></td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </body>

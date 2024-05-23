@@ -10,14 +10,14 @@
     <title>Mouseover</title>
   </head>
   <body data-ng-app="">
-    <p>
+    <label>
       <textarea
         data-ng-init="calculate=0"
         data-ng-mouseover="calculate = calculate + 1"
       >
 Here is a textarea</textarea
-      >
-    </p>
-    <h3>count: {{calculate}}</h3>
+      >&nbsp;
+    </label>
+    <h1>count: {{calculate}}</h1>
   </body>
 </html>
