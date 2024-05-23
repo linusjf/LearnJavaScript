@@ -1,35 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta
-      content="HTML Tidy for HTML5 for Linux version 5.9.14"
-      name="generator"
-    />
-    <meta charset="utf-8" />
-    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
-    <title>Orderby</title>
-  </head>
-  <body>
-    <div
-      data-ng-app=""
-      data-ng-init="member=[{name: &#39;Clare&#39;}, {name: &#39;Ella&#39;}, {name: &#39;Andy&#39;}, {name: &#39;Davy&#39;}, {name: &#39;Betty&#39;}]"
-    >
-      <table border="1">
-        <tr>
-          <th>Student Name</th>
-        </tr>
-        <tr data-ng-repeat="arr in member | orderBy:&#39;name&#39;">
-          <td data-ng-bind="arr.name"></td>
-        </tr>
-      </table>
-      <table border="1">
-        <tr>
-          <th>Student Name</th>
-        </tr>
-        <tr data-ng-repeat="arr in member | orderBy:&#39;-name&#39;">
-          <td data-ng-bind="arr.name"></td>
-        </tr>
-      </table>
-    </div>
-  </body>
+<head>
+  <meta content="HTML Tidy for HTML5 for Linux version 5.9.14" name="generator" />
+  <meta charset="utf-8" />
+  <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+  <title>Orderby</title>
+</head>
+<body>
+  <div data-ng-app="" data-ng-init="member=[{name: &#39;Clare&#39;}, {name: &#39;Ella&#39;}, {name: &#39;Andy&#39;}, {name: &#39;Davy&#39;}, {name: &#39;Betty&#39;}]">
+    <table border="1">
+      <tr>
+        <th>Student Name</th>
+      </tr>
+      <tr data-ng-repeat="arr in member | orderBy:&#39;name&#39;">
+        <td data-ng-bind="arr.name"></td>
+      </tr>
+    </table>
+    <table border="1">
+      <tr>
+        <th>Student Name</th>
+      </tr>
+      <tr data-ng-repeat="arr in member | orderBy:&#39;-name&#39;">
+        <td data-ng-bind="arr.name"></td>
+      </tr>
+    </table>
+  </div>
+</body>
 </html>

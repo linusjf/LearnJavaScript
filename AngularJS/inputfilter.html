@@ -1,37 +1,27 @@
-<!doctype html>
-<html
-  data-ng-app=""
-  lang="en"
-  xml:lang="en"
-  xmlns="http://www.w3.org/1999/xhtml"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      content="HTML Tidy for HTML5 for Linux version 5.9.14"
-      name="generator"
-    />
-    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
-    <title>Inputfilter</title>
-  </head>
-  <body>
-    <div
-      data-ng-init="members = [{name:&#39;Andy&#39;, age:&#39;19&#39;}, {name:&#39;Rose&#39;, age:&#39;18&#39;}, {name:&#39;Jony&#39;, age:&#39;17&#39;}, {name:&#39;Judy&#39;, age:&#39;16&#39;}, {name:&#39;Tomy&#39;, age:&#39;15&#39;}]"
-    >
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-        </tr>
-        <tr data-ng-repeat="person in members | filter:search">
-          <td>{{person.name}}</td>
-          <td>{{person.age}}</td>
-        </tr>
-      </table>
-      <br />
-      Please input one of the names or ages
-      <br />
-      <input data-ng-model="search" />
-    </div>
-  </body>
+<!DOCTYPE html>
+<html data-ng-app="" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta content="HTML Tidy for HTML5 for Linux version 5.9.14" name="generator" />
+  <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+  <title>Inputfilter</title>
+</head>
+<body>
+  <div data-ng-init="members = [{name:&#39;Andy&#39;, age:&#39;19&#39;}, {name:&#39;Rose&#39;, age:&#39;18&#39;}, {name:&#39;Jony&#39;, age:&#39;17&#39;}, {name:&#39;Judy&#39;, age:&#39;16&#39;}, {name:&#39;Tomy&#39;, age:&#39;15&#39;}]">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      <tr data-ng-repeat="person in members | filter:search">
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+      </tr>
+    </table>
+    <br />
+    Please input one of the names or ages
+    <br />
+    <input data-ng-model="search" />
+  </div>
+</body>
 </html>

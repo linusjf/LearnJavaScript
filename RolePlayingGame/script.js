@@ -10,12 +10,12 @@ const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const text = document.querySelector("#text");
-const xpText = document.querySelector("#xpText");
-const healthText = document.querySelector("#healthText");
-const goldText = document.querySelector("#goldText");
+const xpText = document.querySelector("#xp-text");
+const healthText = document.querySelector("#health-text");
+const goldText = document.querySelector("#gold-text");
 const monsterStats = document.querySelector("#monster-stats");
-const monsterName = document.querySelector("#monsterName");
-const monsterHealthText = document.querySelector("#monsterHealth");
+const monsterName = document.querySelector("#monster-name");
+const monsterHealthText = document.querySelector("#monster-health");
 const weapons = [
   { name: "stick", power: 5 },
   { name: "dagger", power: 30 },
@@ -75,7 +75,7 @@ const locations = [
       "Go to town square",
       "Go to town square"
     ],
-    "button functions": [goTown, goTown, goTown],
+    "button functions": [goTown, goTown, easterEgg],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
   },
   {
