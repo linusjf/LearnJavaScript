@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html data-ng-app="" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta content="HTML Tidy for HTML5 for Linux version 5.9.14" name="generator" />
-  <meta charset="utf-8" />
-  <title>Email</title>
-  <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
-</head>
-<body>
-  <form id="my-form" name="my-form">
-    <label for="email">Please input your email address:</label>
-    <br />
-    <br />
-    <input data-ng-model="data" id="email" name="addr" type="email" />
-    <br />
-    <br />
-    <div data-ng-show="my-form.addr.$error.email">
-      Invalid email address!
-    </div><button type="submit">Submit</button>
-  </form>
-</body>
+<!doctype html>
+<html
+  data-ng-app=""
+  lang="en"
+  xml:lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+    <meta
+      content="HTML Tidy for HTML5 for Linux version 5.9.14"
+      name="generator"
+    />
+    <meta charset="utf-8" />
+    <title>Email</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+  </head>
+  <body>
+    <form id="my-form" name="my-form">
+      <label for="email">Please input your email address:</label>
+      <br />
+      <br />
+      <input data-ng-model="data" id="email" name="addr" type="email" />
+      <br />
+      <br />
+      <div data-ng-show="my-form.addr.$error.email">Invalid email address!</div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
