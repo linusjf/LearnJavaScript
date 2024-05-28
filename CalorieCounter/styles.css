@@ -10,8 +10,8 @@
 }
 
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
   background-color: var(--fcc-blue);
   color: var(--light-grey);
 }
@@ -22,13 +22,13 @@ h1 {
 
 .container {
   width: 90%;
-  max-width: 680px;
+  max-width: 42.5rem;
 }
 
 h1,
 .container,
 .output {
-  margin: 20px auto;
+  margin: 1.25rem auto;
 }
 
 label,
@@ -45,13 +45,13 @@ button {
   cursor: pointer;
   text-decoration: none;
   background-color: var(--light-yellow);
-  border: 2px solid var(--dark-yellow);
+  border: 0.125rem solid var(--dark-yellow);
 }
 
 button,
 input,
 select {
-  min-height: 24px;
+  min-height: 1.5rem;
   color: var(--dark-blue);
 }
 
@@ -60,12 +60,12 @@ label,
 button,
 input,
 select {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .output {
-  border: 2px solid var(--light-grey);
-  padding: 10px;
+  border: 0.125rem solid var(--light-grey);
+  padding: 0.625rem;
   text-align: center;
 }
 
