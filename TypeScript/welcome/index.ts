@@ -1,3 +1,3 @@
-export function welcome(name:string) {
+export function welcome(name: string) {
   console.log(`Welcome, ${name}!`);
 }

@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 filename="$1"
 filename="${filename%.*}"
-if [[ -e "$filename".js ]]
-then
+if [[ -e "$filename".js ]]; then
   rm "$filename".js
 fi
 ts-node "$1"

@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 filename="$1"
 filename="${filename%.*}"
-if [[ -e "$filename".js ]]
-then
+if [[ -e "$filename".js ]]; then
   rm "$filename".js
 fi
-tsc $(cat tsconfig.json | strip-json-comments | jq -r '.compilerOptions | to_entries[] | "--\(.key) \(.value)"') --pretty "$1"
+tsc "$(strip-json-comments tsconfig.json | jq -r '.compilerOptions | to_entries[] | "--\(.key) \(.value)"') --pretty ${1}"
 #tsc -t es2015 --pretty "$1"
 ret="$?"
-if [[ 0 -eq "$ret" ]]
-then
+if [[ 0 -eq "$ret" ]]; then
   node "$filename".js
 fi
 exit "$ret"

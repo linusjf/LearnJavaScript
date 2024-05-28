@@ -1,17 +1,17 @@
 #!/usr/bin/env ts-node
 class Parent {
-  static num:number;
-  static func():void {
+  static num: number;
+  static func(): void {
     console.log("The num value is " + Parent.num);
   }
-  str:string = "";
-  myFunc():void {
+  str: string = "";
+  myFunc(): void {
     console.log("I am from parent class.");
   }
 }
 
 class Child extends Parent {
-  myFunc():void {
+  myFunc(): void {
     super.myFunc();
     console.log("I am from child class.");
   }
@@ -30,52 +30,55 @@ Parent.num = 200;
 Parent.func();
 
 interface Book {
-  title:string;
+  title: string;
 }
 
 class EBook implements Book {
-  title:string = "Shell Scripting in 8 hours";
+  title: string = "Shell Scripting in 8 hours";
 }
 
 const book = new EBook();
 console.log(book.title);
 
-const ebook:Book = {
-  title:"Perl in 8 hours",
+const ebook: Book = {
+  title: "Perl in 8 hours"
 };
 console.log(ebook.title);
 
 const books = {
-  title1:"Swift in 8 hours",
-  title2:"Scala in 8 hours",
-  title:function(){}
+  title1: "Swift in 8 hours",
+  title2: "Scala in 8 hours",
+  title: function () {}
 };
 console.log(books.title1);
 console.log(books.title2);
-books.title = function() {
+books.title = function () {
   console.log("Kotlin in 8 hours");
 };
 books.title();
 
 abstract class Machine {
-  constructor(public manufacturer: string) {
-  }
+  constructor(public manufacturer: string) {}
 
   summary(): string {
     return `${this.manufacturer} makes this machine.`;
   }
 
-abstract moreInfo(): string;
+  abstract moreInfo(): string;
 }
 
 class Car extends Machine {
-  constructor(manufacturer: string, public position: number, protected speed: number) {
+  constructor(
+    manufacturer: string,
+    public position: number,
+    protected speed: number
+  ) {
     super(manufacturer);
   }
-  move () {
+  move() {
     this.position += this.speed;
   }
-  moreInfo () {
+  moreInfo() {
     return `This is a car located at ${this.position} and going ${this.speed} mph!`;
   }
 }
@@ -86,22 +89,22 @@ console.log(myCar.summary());
 console.log(myCar.moreInfo());
 
 class SelfDrivingCar extends Car {
-  constructor(mfr:string,startAutoPilot: boolean) {
-    super(mfr,0, 42);
+  constructor(mfr: string, startAutoPilot: boolean) {
+    super(mfr, 0, 42);
     if (startAutoPilot) {
       this.move();
     }
   }
 }
 
-const car = new SelfDrivingCar("Tesla",true);
+const car = new SelfDrivingCar("Tesla", true);
 console.log(car.position);
 
 class Vehicle {
   public position: number = 0;
   private _speed: number = 42;
   private _MAX_SPEED = 100;
-  move () {
+  move() {
     this.position += this._speed;
   }
   get speed(): number {
@@ -120,7 +123,7 @@ class SomeClass {
   public static SomeStaticValue: string = "hello";
   public someMemberValue: number = 15;
   private somePrivateValue: boolean = false;
-  constructor () {
+  constructor() {
     SomeClass.SomeStaticValue = SomeClass.getGoodbye();
     this.someMemberValue = this.getFortyTwo();
     this.somePrivateValue = this.getTrue();
@@ -128,40 +131,44 @@ class SomeClass {
   public static getGoodbye(): string {
     return "goodbye!";
   }
-  public getFortyTwo (): number {
+  public getFortyTwo(): number {
     return 42;
   }
-  private getTrue (): boolean {
+  private getTrue(): boolean {
     return true;
   }
 }
 
 class AutoMobile {
-  name:string;
-  engineCapacity:string;
-  constructor(name:string,engineCapacity:string) {
+  name: string;
+  engineCapacity: string;
+  constructor(name: string, engineCapacity: string) {
     this.name = name;
     this.engineCapacity = engineCapacity;
   }
 
   describeCar() {
-    console.log(`${this.name} car comes with ${this.engineCapacity} displacement`);
+    console.log(
+      `${this.name} car comes with ${this.engineCapacity} displacement`
+    );
   }
 }
 
-new AutoMobile("Maruti Ciaz","1500cc").describeCar();
+new AutoMobile("Maruti Ciaz", "1500cc").describeCar();
 
 class Honda extends AutoMobile {
-  seatingCapacity:number;
-  constructor(name:string,engineCapacity:string,seatingCapacity:number) {
-    super(name,engineCapacity);
+  seatingCapacity: number;
+  constructor(name: string, engineCapacity: string, seatingCapacity: number) {
+    super(name, engineCapacity);
     this.seatingCapacity = seatingCapacity;
   }
 
   describeHonda() {
     super.describeCar();
-    console.log(`this car comes with seating capacity of ${this.seatingCapacity}`);
+    console.log(
+      `this car comes with seating capacity of ${this.seatingCapacity}`
+    );
   }
 }
 
-new Honda("honda jazz","1200cc",4).describeHonda();
+new Honda("honda jazz", "1200cc", 4).describeHonda();

@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("get-message").onclick = function () {
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("get-message").onclick = function() {
     const req = new XMLHttpRequest();
     req.open("GET", "/json/cats.json", true);
     req.send();
-    req.onload = function () {
+    req.onload = function() {
       const json = JSON.parse(req.responseText);
       let html = "";
-      json.forEach(function (val) {
+      json.forEach(function(val) {
         html += "<div class = 'cat'>";
         // Add your code below this line
         html +=

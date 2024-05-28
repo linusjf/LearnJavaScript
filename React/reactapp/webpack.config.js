@@ -21,19 +21,17 @@ module.exports = {
     contentBase: "./dist",
   },
   module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-            plugins: ["@babel/plugin-proposal-object-rest-spread"]
-          }
+    rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-env"],
+          plugins: ["@babel/plugin-proposal-object-rest-spread"]
         }
       }
-    ]
+    }]
   },
   plugins: [
     new HtmlWebpackPlugin({

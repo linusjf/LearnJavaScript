@@ -1,8 +1,9 @@
 #!/usr/bin/env ts-node
 const enum NinjaActivity {
-  Espionage ,
+  Espionage,
   Sabotage,
-  Assassination }
+  Assassination
+}
 const myFavoriteNinjaActivity = NinjaActivity.Espionage;
 console.log(myFavoriteNinjaActivity);
 console.log(NinjaActivity["Sabotage"]);
@@ -16,48 +17,68 @@ const myFavoritePirateActivity = PirateActivity.Boarding;
 console.log(myFavoritePirateActivity);
 console.log(PirateActivity["Drinking"]);
 console.log(PirateActivity[myFavoritePirateActivity]);
-enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday
+}
 const bestDay: Day = Day.Saturday;
 console.log(bestDay);
-enum TenPlus { Ten = 10, Eleven, Twelve }
+enum TenPlus {
+  Ten = 10,
+  Eleven,
+  Twelve
+}
 console.log(TenPlus);
-enum MyOddSet { Three = 3, Five = 5, Seven = 7, Nine = 9 }
+enum MyOddSet {
+  Three = 3,
+  Five = 5,
+  Seven = 7,
+  Nine = 9
+}
 console.log(MyOddSet);
 enum MimeTypes {
   JPEG = <any>"image/jpeg",
-    PNG = <any>"image/png",
-    PDF = <any>"application/pdf"
+  PNG = <any>"image/png",
+  PDF = <any>"application/pdf"
 }
 console.log(MimeTypes);
 enum MyType {
   Value = 3,
-    ValueEx = 30,
-    ValueEx2 = 300
+  ValueEx = 30,
+  ValueEx2 = 300
 }
 console.log(MyType);
 enum FancyType {
   OneArr = <any>[1],
-    TwoArr = <any>[2, 2],
-    ThreeArr = <any>[3, 3, 3]
+  TwoArr = <any>[2, 2],
+  ThreeArr = <any>[3, 3, 3]
 }
 console.log(FancyType);
-enum SomeEnum { A, B }
-const enumValues:Array<string>= [];
-for(const value in SomeEnum) {
-  if(typeof SomeEnum[value] === "number") {
+enum SomeEnum {
+  A,
+  B
+}
+const enumValues: Array<string> = [];
+for (const value in SomeEnum) {
+  if (typeof SomeEnum[value] === "number") {
     enumValues.push(value);
   }
 }
-enumValues.forEach(v=> console.log(v));
+enumValues.forEach((v) => console.log(v));
 
 enum SrcEnum {
   value1 = <any>"value1",
-    value2 = <any>"value2"
+  value2 = <any>"value2"
 }
 
 enum AdditionToSourceEnum {
   value3 = <any>"value3",
-    value4 = <any>"value4"
+  value4 = <any>"value4"
 }
 // we need this type for TypeScript to resolve the types correctly
 type TestEnumType = SrcEnum | AdditionToSourceEnum;

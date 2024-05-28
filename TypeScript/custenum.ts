@@ -6,7 +6,7 @@ class Enum {
     return String(this.value);
   }
   public is(value: Enum | string) {
-    return this.value = value.toString();
+    return (this.value = value.toString());
   }
 }
 

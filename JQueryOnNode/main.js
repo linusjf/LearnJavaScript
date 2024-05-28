@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Importing the jsdom module
+ // Importing the jsdom module
 
 const jsdom = require("jsdom");
 XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
@@ -17,7 +17,7 @@ const dom = new jsdom.JSDOM(`<!DOCTYPE html>
 // with the window
 const jquery = require("jquery")(dom.window);
 jquery.support.cors = true;
-jquery.ajaxSettings.xhr = function () {
+jquery.ajaxSettings.xhr = function() {
   return new XMLHttpRequest();
 };
 
@@ -51,20 +51,20 @@ async function getRandomQuote() {
     })
     // Code to run if the request succeeds (is done);
     // The response is passed to the function
-    .done(function (json) {
+    .done(function(json) {
       const count = json.found;
       const rnd = Math.ceil(Math.random() * count);
       getRandomQuoteIdx(rnd);
     })
     // Code to run if the request fails; the raw request and
     // status codes are passed to the function
-    .fail(function (xhr, status, errorThrown) {
+    .fail(function(xhr, status, errorThrown) {
       console.log("Error: " + errorThrown);
       console.log("Status: " + status);
       console.dir(xhr);
     })
     // Code to run regardless of success or failure;
-    .always(function (xhr, status) {
+    .always(function(xhr, status) {
       console.log("The request is complete!");
     });
 }
@@ -88,7 +88,7 @@ async function getRandomQuoteIdx(idx) {
     })
     // Code to run if the request succeeds (is done);
     // The response is passed to the function
-    .done(function (json) {
+    .done(function(json) {
       const title = json.posts[0].title;
       const content = json.posts[0].content;
       const author = title.split(":", 1)[0];
@@ -100,13 +100,13 @@ async function getRandomQuoteIdx(idx) {
     })
     // Code to run if the request fails; the raw request and
     // status codes are passed to the function
-    .fail(function (xhr, status, errorThrown) {
+    .fail(function(xhr, status, errorThrown) {
       console.log("Error: " + errorThrown);
       console.log("Status: " + status);
       console.dir(xhr);
     })
     // Code to run regardless of success or failure;
-    .always(function (xhr, status) {
+    .always(function(xhr, status) {
       console.log("The request is complete!");
     });
 }

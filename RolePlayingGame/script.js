@@ -16,14 +16,24 @@ const goldText = document.querySelector("#gold-text");
 const monsterStats = document.querySelector("#monster-stats");
 const monsterName = document.querySelector("#monster-name");
 const monsterHealthText = document.querySelector("#monster-health");
-const weapons = [
-  { name: "stick", power: 5 },
-  { name: "dagger", power: 30 },
-  { name: "claw hammer", power: 50 },
-  { name: "sword", power: 100 }
-];
-const monsters = [
+const weapons = [{
+    name: "stick",
+    power: 5
+  },
   {
+    name: "dagger",
+    power: 30
+  },
+  {
+    name: "claw hammer",
+    power: 50
+  },
+  {
+    name: "sword",
+    power: 100
+  }
+];
+const monsters = [{
     name: "slime",
     level: 2,
     health: 15
@@ -39,8 +49,7 @@ const monsters = [
     health: 300
   }
 ];
-const locations = [
-  {
+const locations = [{
     name: "town square",
     "button text": ["Go to store", "Go to cave", "Fight dragon"],
     "button functions": [goStore, goCave, fightDragon],

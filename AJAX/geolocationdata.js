@@ -1,6 +1,6 @@
 // Add your code below this line
 if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition(function(position) {
     document.getElementById("data").innerHTML =
       "latitude: " +
       position.coords.latitude +

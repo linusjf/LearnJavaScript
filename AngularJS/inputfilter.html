@@ -19,19 +19,25 @@
       data-ng-init="members = [{name:&#39;Andy&#39;, age:&#39;19&#39;}, {name:&#39;Rose&#39;, age:&#39;18&#39;}, {name:&#39;Jony&#39;, age:&#39;17&#39;}, {name:&#39;Judy&#39;, age:&#39;16&#39;}, {name:&#39;Tomy&#39;, age:&#39;15&#39;}]"
     >
       <table>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-        </tr>
-        <tr data-ng-repeat="person in members | filter:search">
-          <td>{{person.name}}</td>
-          <td>{{person.age}}</td>
-        </tr>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="person in members | filter:search">
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+          </tr>
+        </tbody>
       </table>
       <br />
-      Please input one of the names or ages
-      <br />
-      <input data-ng-model="search" />
+      <label
+      >Please input one of the names or ages
+        <br />
+        <input data-ng-model="search" type="text"
+        /></label>
     </div>
   </body>
 </html>

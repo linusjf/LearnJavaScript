@@ -20,15 +20,13 @@ module.exports = {
     modules: ["/data/data/com.termux/files/usr/lib/node_modules"]
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: require.resolve("./src/index.js"),
         use: "imports-loader?wrapper=window",
       },
       {
         test: require.resolve("./src/globals.js"),
-        use:
-          "exports-loader?type=commonjs&exports=file,multiple|helpers.parse|parse",
+        use: "exports-loader?type=commonjs&exports=file,multiple|helpers.parse|parse",
       },
     ],
   },

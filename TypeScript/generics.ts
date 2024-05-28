@@ -20,19 +20,21 @@ class State<T> implements IEvents<T> {
   }
 }
 interface Code {
-message:string;
-status:number;
+  message: string;
+  status: number;
 }
 const s = new State<IStatus<number>>();
 s.emit({ code: 200 });
 //s.emit({ code: '500' });
-s.getAll().forEach(event => console.log(event.code));
+s.getAll().forEach((event) => console.log(event.code));
 const s2 = new State<IStatus<Code>>();
 s2.emit({ code: { message: "OK", status: 200 } });
-s2.getAll().map(event => event.code).forEach(event => {
-  console.log(event.message);
-  console.log(event.status);
-});
+s2.getAll()
+  .map((event) => event.code)
+  .forEach((event) => {
+    console.log(event.message);
+    console.log(event.status);
+  });
 
 interface IResult<T> {
   wasSuccessful: boolean;
@@ -41,16 +43,16 @@ interface IResult<T> {
 }
 
 const response: IResult<string> = {
-  wasSuccessful:true,
-  error:"",
+  wasSuccessful: true,
+  error: "",
   clone() {
-    const copy : IResult<string> = {
-      wasSuccessful:this.wasSuccessful,
-      error:this.error,
-      clone: this.clone,
+    const copy: IResult<string> = {
+      wasSuccessful: this.wasSuccessful,
+      error: this.error,
+      clone: this.clone
     };
     return copy;
-  },
+  }
 };
 const error: string = response.error;
 const copy: IResult<string> = response.clone();
@@ -65,27 +67,31 @@ interface IRunnable<T, U> {
 }
 
 const runnable: IRunnable<string, number> = {
-  run(input:string):number {
+  run(input: string): number {
     return input.length;
   }
 };
 
-const input:string = "Input";
+const input: string = "Input";
 const result: number = runnable.run(input);
 console.log(result);
 
 class Result<T> implements IResult<T> {
-  constructor(public wasSuccessful: boolean, public error: T) {
-  }
-  public clone (): IResult<T> {
+  constructor(
+    public wasSuccessful: boolean,
+    public error: T
+  ) {}
+  public clone(): IResult<T> {
     return new Result<T>(this.wasSuccessful, this.error);
   }
 }
 
 class StringResult implements IResult<string> {
-  constructor(public wasSuccessful: boolean, public error: string) {
-  }
-  public clone (): IResult<string> {
+  constructor(
+    public wasSuccessful: boolean,
+    public error: string
+  ) {}
+  public clone(): IResult<string> {
     return new StringResult(this.wasSuccessful, this.error);
   }
 }

@@ -50,17 +50,17 @@ function showResults(userOption) {
     optionsContainer.style.display = "none";
   }
 
-};
+}
 
 function resetGame() {
-playerScore = computerScore = 0;
-playerScoreSpanElement.innerText = playerScore;
-computerScoreSpanElement.innerText = computerScore;
-resetGameBtn.style.display = "none";
-optionsContainer.style.display = "block";
-roundResultsMsg.innerText = "";
-winnerMsgElement.innerText = "";
-};
+  playerScore = computerScore = 0;
+  playerScoreSpanElement.innerText = playerScore;
+  computerScoreSpanElement.innerText = computerScore;
+  resetGameBtn.style.display = "none";
+  optionsContainer.style.display = "block";
+  roundResultsMsg.innerText = "";
+  winnerMsgElement.innerText = "";
+}
 
 resetGameBtn.addEventListener("click", resetGame);
 
@@ -68,14 +68,14 @@ const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
 const scissorsBtn = document.getElementById("scissors-btn");
 
-rockBtn.addEventListener("click", function () {
+rockBtn.addEventListener("click", function() {
   showResults("Rock");
 });
 
-paperBtn.addEventListener("click", function () {
+paperBtn.addEventListener("click", function() {
   showResults("Paper");
 });
 
-scissorsBtn.addEventListener("click", function () {
+scissorsBtn.addEventListener("click", function() {
   showResults("Scissors");
 });

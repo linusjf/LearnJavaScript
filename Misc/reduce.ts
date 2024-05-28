@@ -1,13 +1,19 @@
 #!/usr/bin/env ts-node
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const numbers: number[] = [ 1, 2, 3, 4, 5 ];
+const numbers: number[] = [1, 2, 3, 4, 5];
 const sum: number = numbers.reduce((acc, curr) => acc + curr, 0);
 // Output: 15
 console.log(sum);
 
-const nestedArray: number[][] = [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ];
-const flattenedArray: number[] =
-    nestedArray.reduce((acc, curr) => acc.concat(curr), []);
+const nestedArray: number[][] = [
+  [1, 2],
+  [3, 4],
+  [5, 6]
+];
+const flattenedArray: number[] = nestedArray.reduce(
+  (acc, curr) => acc.concat(curr),
+  []
+);
 // Output: [1, 2, 3, 4, 5, 6]
 console.log(flattenedArray);
 
@@ -17,8 +23,10 @@ interface Person {
 }
 
 const people: Person[] = [
-  {name : "Alice", age : 25}, {name : "Bob", age : 30},
-  {name : "Charlie", age : 25}, {name : "Dave", age : 30}
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 25 },
+  { name: "Dave", age: 30 }
 ];
 
 type GroupedByAge = Record<number, Person[]>;
@@ -47,9 +55,9 @@ interface Product {
 }
 
 const products: Product[] = [
-  {id : 1, name : "Laptop", price : 999},
-  {id : 2, name : "Phone", price : 699},
-  {id : 3, name : "Tablet", price : 499},
+  { id: 1, name: "Laptop", price: 999 },
+  { id: 2, name: "Phone", price: 699 },
+  { id: 3, name: "Tablet", price: 499 }
 ];
 
 type ProductMap = Record<number, Product>;
@@ -73,8 +81,14 @@ const laptop: Product = productMap[1];
 // Output: { id: 1, name: 'Laptop', price: 999 }
 console.log(laptop);
 
-const fruits: string[] =
-    [ "apple", "banana", "apple", "orange", "banana", "apple" ];
+const fruits: string[] = [
+  "apple",
+  "banana",
+  "apple",
+  "orange",
+  "banana",
+  "apple"
+];
 
 type FruitCount = Record<string, number>;
 const fruitCounts: FruitCount = fruits.reduce((acc, curr) => {
@@ -97,7 +111,7 @@ const add5: MathFn = (x) => x + 5;
 const multiply3: MathFn = (x) => x * 3;
 const subtract2: MathFn = (x) => x - 2;
 
-const composedFunctions: (MathFn)[] = [ add5, multiply3, subtract2 ];
+const composedFunctions: MathFn[] = [add5, multiply3, subtract2];
 
 const result: number = composedFunctions.reduce((acc, curr) => curr(acc), 10);
 // Output: 43
@@ -114,25 +128,25 @@ interface Action {
 }
 
 const initialState: State = {
-  count : 0,
-  todos : [] as string[],
+  count: 0,
+  todos: [] as string[]
 };
 
 const actions: Action[] = [
-  {type : "INCREMENT_COUNT"},
-  {type : "ADD_TODO", payload : "Learn Array.reduce()"},
-  {type : "INCREMENT_COUNT"},
-  {type : "ADD_TODO", payload : "Master TypeScript"},
+  { type: "INCREMENT_COUNT" },
+  { type: "ADD_TODO", payload: "Learn Array.reduce()" },
+  { type: "INCREMENT_COUNT" },
+  { type: "ADD_TODO", payload: "Master TypeScript" }
 ];
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
-  case "INCREMENT_COUNT":
-    return {...state, count : state.count + 1};
-  case "ADD_TODO":
-    return {...state, todos : [...state.todos, action.payload ]};
-  default:
-    return state;
+    case "INCREMENT_COUNT":
+      return { ...state, count: state.count + 1 };
+    case "ADD_TODO":
+      return { ...state, todos: [...state.todos, action.payload] };
+    default:
+      return state;
   }
 };
 
@@ -146,7 +160,7 @@ Output:
 */
 console.log(finalState);
 
-const nums: number[] = [ 1, 2, 3, 2, 4, 3, 5, 1, 6 ];
+const nums: number[] = [1, 2, 3, 2, 4, 3, 5, 1, 6];
 
 const uniqueNumbers: number[] = nums.reduce((acc, curr) => {
   if (!acc.includes(curr)) {
@@ -158,7 +172,7 @@ const uniqueNumbers: number[] = nums.reduce((acc, curr) => {
 // Output: [1, 2, 3, 4, 5, 6]
 console.log(uniqueNumbers);
 
-const grades: number[] = [ 85, 90, 92, 88, 95 ];
+const grades: number[] = [85, 90, 92, 88, 95];
 
 const average: number = grades.reduce((acc, curr, index, array) => {
   acc += curr;

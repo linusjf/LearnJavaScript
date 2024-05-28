@@ -17,29 +17,29 @@ exampleString({ something: "else" });
 // prints "don't know what this is! [[object Object]]"
 
 interface JQuery {
-  eq(val:number): boolean;
+  eq(val: number): boolean;
 }
 
-function isJQuery(foo:any): foo is JQuery {
+function isJQuery(foo: any): foo is JQuery {
   // test for jQuery's version string
   return foo.jquery !== undefined;
 }
 
-function exampleQuery(foo:any) {
+function exampleQuery(foo: any) {
   if (isJQuery(foo)) {
     // foo is typed JQuery here
     foo.eq(0);
   }
 }
 
-class Pet { }
+class Pet {}
 class Dog extends Pet {
   bark() {
-    console. log("woof");
+    console.log("woof");
   }
 }
 class Cat extends Pet {
-  purr () {
+  purr() {
     console.log("meow");
   }
 }

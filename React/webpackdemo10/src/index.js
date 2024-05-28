@@ -12,7 +12,7 @@ function component() {
 
   // Note that because a network request is involved, some indication
   // of loading would need to be shown in a production-level site/app.
-  button.onclick = _e => import(/* webpackChunkName: "print" */ "./print").then(module => {
+  button.onclick = _e => import( /* webpackChunkName: "print" */ "./print").then(module => {
     const print = module.default;
     print();
   });

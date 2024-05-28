@@ -1,12 +1,12 @@
 #!/usr/bin/env ts-node
 interface Knife {
-  cut():void;
+  cut(): void;
 }
 interface BottleOpener {
-  openBottle():void;
+  openBottle(): void;
 }
 interface Screwdriver {
-  turnScrew():void;
+  turnScrew(): void;
 }
 type SwissArmyKnife = Knife & BottleOpener & Screwdriver;
 function use(tool: SwissArmyKnife) {
@@ -15,14 +15,14 @@ function use(tool: SwissArmyKnife) {
   tool.openBottle();
   tool.turnScrew();
 }
-const sak:SwissArmyKnife = {
-  cut():void  {
+const sak: SwissArmyKnife = {
+  cut(): void {
     console.log("Cut.");
   },
-  openBottle():void  {
+  openBottle(): void {
     console.log("Opened bottle.");
   },
-  turnScrew():void  {
+  turnScrew(): void {
     console.log("Turned screw.");
   }
 };

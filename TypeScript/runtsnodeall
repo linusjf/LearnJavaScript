@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ls *.ts | parallel -I {} ts-node {}
+find . -maxdepth 1 -name "*.ts" | parallel -I {} ts-node {}

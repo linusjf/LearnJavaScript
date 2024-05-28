@@ -21,7 +21,7 @@ if (module.hot) {
     console.log("Accepting the updated printMe module!");
     document.body.removeChild(element);
     // Re-render the "component" to update the click handler
-    element = component(); 
+    element = component();
     document.body.appendChild(element);
   });
 }

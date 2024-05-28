@@ -1,21 +1,21 @@
 #!/usr/bin/env ts-node
-const globalNum = 200; 
-// global variable 
-function myFunction():void { 
-  // local variable 
-  const localNum = 100; 
+const globalNum = 200;
+// global variable
+function myFunction(): void {
+  // local variable
+  const localNum = 100;
   console.log("The local variable: " + localNum);
-} 
-console.log("The global variable: " + globalNum); 
+}
+console.log("The global variable: " + globalNum);
 myFunction();
 
 class Automobile {
-  car:string; 
+  car: string;
   // declare a variable member “car”
-  constructor(car:string) {
+  constructor(car: string) {
     this.car = car;
   }
-  drive():void {
+  drive(): void {
     console.log("I am driving a new " + this.car);
   }
 }
@@ -25,17 +25,16 @@ console.log(auto.car);
 auto.drive();
 
 class Building {
-  High:number;
-  constructor(param:number) {
+  High: number;
+  constructor(param: number) {
     this.High = param;
   }
 }
 
-// extends 
-class House extends Building { 
-  size():void {
-    console.log("The height of the house is: "
-                + this.High + " feet");
+// extends
+class House extends Building {
+  size(): void {
+    console.log("The height of the house is: " + this.High + " feet");
   }
 }
 

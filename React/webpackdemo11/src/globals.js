@@ -1,10 +1,10 @@
 /* eslint-disable */
 const file = "blah.txt";
 const helpers = {
-  test: function () {
+  test: function() {
     console.log("test something");
   },
-  parse: function () {
+  parse: function() {
     console.log("parse something");
   },
 };

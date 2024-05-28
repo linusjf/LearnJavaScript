@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node
 class StaticTest {
-  static countInstance:number = 0;
+  static countInstance: number = 0;
   constructor() {
     StaticTest.countInstance++;
   }

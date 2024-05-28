@@ -31,7 +31,7 @@ class SampleClass implements ISampleClassInterface {
   }
 }
 
-interface Connector{
+interface Connector {
   doConnect(): boolean;
 }
 
@@ -84,8 +84,11 @@ interface Pet {
   age: number;
 }
 
-function checkCompatible(petOne:Pet, petTwo:Pet) {
-  if (petOne.species === petTwo.species && Math.abs(petOne.age - petTwo.age) <= 5) {
+function checkCompatible(petOne: Pet, petTwo: Pet) {
+  if (
+    petOne.species === petTwo.species &&
+    Math.abs(petOne.age - petTwo.age) <= 5
+  ) {
     return true;
   }
 }

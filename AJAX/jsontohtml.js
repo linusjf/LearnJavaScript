@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("get-message").onclick = function () {
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("get-message").onclick = function() {
     const req = new XMLHttpRequest();
     req.open("GET", "/json/cats.json", true);
     req.send();
-    req.onload = function () {
+    req.onload = function() {
       const json = JSON.parse(req.responseText);
       let html = "";
       // Add your code below this line
-      json.forEach(function (val) {
+      json.forEach(function(val) {
         const keys = Object.keys(val);
         html += "<div class = 'cat'>";
-        keys.forEach(function (key) {
+        keys.forEach(function(key) {
           html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
         });
         html += "</div><br>";

@@ -1,3 +1,3 @@
 #!/usr/bin/env ts-node
-export {Add} from "./Add";
-export {Mul} from "./Mul";
+export { Add } from "./Add";
+export { Mul } from "./Mul";

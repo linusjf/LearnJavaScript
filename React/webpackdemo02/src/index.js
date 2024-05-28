@@ -8,19 +8,19 @@ import yaml from "./data.yaml";
 import json from "./data.json5";
 
 // output `TOML Example`
-console.log(toml.title); 
+console.log(toml.title);
 // output `Tom Preston-Werner`
-console.log(toml.owner.name); 
+console.log(toml.owner.name);
 
 // output `YAML Example`
-console.log(yaml.title); 
+console.log(yaml.title);
 // output `Tom Preston-Werner`
 console.log(yaml.owner.name);
 
 // output `JSON5 Example`
 console.log(json.title);
 // output `Tom Preston-Werner`
-console.log(json.owner.name); 
+console.log(json.owner.name);
 
 function component() {
   const element = document.createElement("div");

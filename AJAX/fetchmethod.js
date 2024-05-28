@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("get-message").onclick = () => {
     fetch("/json/cats.json")
       .then((response) => response.json())

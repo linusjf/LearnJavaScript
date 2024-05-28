@@ -21,8 +21,7 @@ module.exports = {
     contentBase: "./dist",
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {

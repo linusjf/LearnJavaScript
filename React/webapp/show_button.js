@@ -3,7 +3,9 @@ const e = React.createElement;
 
 class ShowButton extends React.Component {
   render() {
-    return e("button", { onClick: () => alert("Hello there!") }, "Show");
+    return e("button", {
+      onClick: () => alert("Hello there!")
+    }, "Show");
   }
 }
 

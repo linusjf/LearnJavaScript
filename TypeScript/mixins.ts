@@ -17,17 +17,18 @@ class Bulletproof {
 }
 
 class BeetleGuy implements Climbs, Bulletproof {
-  climb!:() => void;
-  deflect!:() => void;
+  climb!: () => void;
+  deflect!: () => void;
 }
 
-applyMixins(BeetleGuy,[Climbs,Bulletproof]);
+applyMixins(BeetleGuy, [Climbs, Bulletproof]);
 
-function applyMixins(derivedCtor:any,baseCtors:any[]) {
-  baseCtors.forEach(baseCtor => {
-    Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
-      if (name!=="constructor") {
-        derivedCtor.prototype[name] = baseCtor.prototype[name];}
+function applyMixins(derivedCtor: any, baseCtors: any[]) {
+  baseCtors.forEach((baseCtor) => {
+    Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
+      if (name !== "constructor") {
+        derivedCtor.prototype[name] = baseCtor.prototype[name];
+      }
     });
   });
 }

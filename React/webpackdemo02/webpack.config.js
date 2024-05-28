@@ -15,8 +15,7 @@ module.exports = {
     modules: ["/data/data/com.termux/files/usr/lib/node_modules"]
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },

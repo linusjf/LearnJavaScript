@@ -1,5 +1,5 @@
 #!/usr/bin/env ts-node
-export function hello(name:any) {
+export function hello(name: any) {
   console.log(`Hello, ${name}`);
 }
 export const answerToLifeTheUniverseAndAnything = 42;

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ls *.ts | parallel -I {} ./runts {}
+find . -maxdepth 1 -name "*.ts" | parallel -I {} ./runts {}
