@@ -8,11 +8,12 @@
     />
     <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
     <title>Hide</title>
+    <link href="/hide.css" rel="stylesheet" />
   </head>
   <body>
     <div data-ng-app="">
-      <input data-ng-model="ChBox" type="checkbox" />Check Box
-      <div data-ng-hide="ChBox" style="background-color: yellow; height: 60px">
+      <label>Check Box<input data-ng-model="ChBox" type="checkbox" /></label>
+      <div data-ng-hide="ChBox" class="chbox">
         <p>I disappear when the check box is checked.</p>
         <p>I appear when the check box is unchecked.</p>
       </div>

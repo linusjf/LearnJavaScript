@@ -3,13 +3,9 @@ const e = React.createElement;
 
 class ShowButton extends React.Component {
   render() {
-    return e(
-      "button",
-      { onClick: () => alert("Hello there!") },
-      "Show"
-    );
+    return e("button", { onClick: () => alert("Hello there!") }, "Show");
   }
 }
 
-const domContainer = document.querySelector("#show_button_container");
+const domContainer = document.querySelector("#show-button-container");
 ReactDOM.render(e(ShowButton), domContainer);

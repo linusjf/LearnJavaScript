@@ -12,9 +12,9 @@
   </head>
   <body>
     <div data-ng-app="">
-      <input data-ng-model="ChBox" type="checkbox" aria-label="checkbox" />Check
+      <input aria-label="checkbox" data-ng-model="ChBox" type="checkbox" />Check
       Box
-      <div data-ng-show="ChBox" class="showcheck">
+      <div class="showcheck" data-ng-show="ChBox">
         <p>I appear when the check box is checked.</p>
         <p>I disappear when the check box is unchecked.</p>
       </div>
