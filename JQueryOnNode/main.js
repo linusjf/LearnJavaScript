@@ -1,8 +1,9 @@
 #!/usr/bin/env node
- // Importing the jsdom module
+/* eslint-disable no-unused-vars */
+// Importing the jsdom module
 
 const jsdom = require("jsdom");
-XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const HttpRequest = require("xmlhttprequest").XMLHttpRequest;
 // Creating a window with a document
 
 const dom = new jsdom.JSDOM(`<!DOCTYPE html>
@@ -17,12 +18,12 @@ const dom = new jsdom.JSDOM(`<!DOCTYPE html>
 // with the window
 const jquery = require("jquery")(dom.window);
 jquery.support.cors = true;
-jquery.ajaxSettings.xhr = function() {
-  return new XMLHttpRequest();
+jquery.ajaxSettings.xhr = function () {
+  return new HttpRequest();
 };
 
 async function main() {
-  const response = await getRandomQuote().then(() => {
+  await getRandomQuote().then(() => {
     // Appending a paragraph tag to the body
     jquery("body").append("<p>Is a cool Website</p>");
     // Getting the content of the body
@@ -44,27 +45,27 @@ async function getRandomQuote() {
         fields: "found",
         category: "thought for today",
         type: "post",
-        status: "publish",
+        status: "publish"
       },
       type: "GET",
-      dataType: "json",
+      dataType: "json"
     })
     // Code to run if the request succeeds (is done);
     // The response is passed to the function
-    .done(function(json) {
+    .done(function (json) {
       const count = json.found;
       const rnd = Math.ceil(Math.random() * count);
       getRandomQuoteIdx(rnd);
     })
     // Code to run if the request fails; the raw request and
     // status codes are passed to the function
-    .fail(function(xhr, status, errorThrown) {
+    .fail(function (xhr, status, errorThrown) {
       console.log("Error: " + errorThrown);
       console.log("Status: " + status);
       console.dir(xhr);
     })
     // Code to run regardless of success or failure;
-    .always(function(xhr, status) {
+    .always(function (_xhr, _status) {
       console.log("The request is complete!");
     });
 }
@@ -81,32 +82,32 @@ async function getRandomQuoteIdx(idx) {
         fields: "title,content",
         category: "thought for today",
         type: "post",
-        status: "publish",
+        status: "publish"
       },
       type: "GET",
-      dataType: "json",
+      dataType: "json"
     })
     // Code to run if the request succeeds (is done);
     // The response is passed to the function
-    .done(function(json) {
+    .done(function (json) {
       const title = json.posts[0].title;
       const content = json.posts[0].content;
       const author = title.split(":", 1)[0];
       const quote = {
         content: content,
-        author: author,
+        author: author
       };
       console.log(quote);
     })
     // Code to run if the request fails; the raw request and
     // status codes are passed to the function
-    .fail(function(xhr, status, errorThrown) {
+    .fail(function (xhr, status, errorThrown) {
       console.log("Error: " + errorThrown);
       console.log("Status: " + status);
       console.dir(xhr);
     })
     // Code to run regardless of success or failure;
-    .always(function(xhr, status) {
+    .always(function (xhr, status) {
       console.log("The request is complete!");
     });
 }
