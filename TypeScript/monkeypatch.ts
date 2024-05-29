@@ -5,18 +5,21 @@ interface String {
   firstPart(): string;
 }
 
-String.prototype.firstPart = function():
-    string { return this.replace(/[^a-z ]/gi, ""); };
+String.prototype.firstPart = function (): string {
+  return this.replace(/[^a-z ]/gi, "");
+};
 
-String.prototype.toCamelCase = function(): string {
+String.prototype.toCamelCase = function (): string {
   return this.firstPart().replace(
-      /(?:^\w|[A-Z]|\b\w|\s+)/g, (match: any, index: number) => {
-        console.log(match);
-        console.log(index);
-        return +match === 0
-                   ? ""
-                   : match[index === 0 ? "toLowerCase" : "toUpperCase"]();
-      });
+    /(?:^\w|[A-Z]|\b\w|\s+)/g,
+    (match: any, index: number) => {
+      console.log(match);
+      console.log(index);
+      return +match === 0
+        ? ""
+        : match[index === 0 ? "toLowerCase" : "toUpperCase"]();
+    }
+  );
 };
 
 console.log("This is an example".firstPart());

@@ -1,9 +1,13 @@
 #!/usr/bin/env ts-node
 // define a function
-function myFun() { console.log("Very Good!"); }
+function myFun() {
+  console.log("Very Good!");
+}
 myFun();
 // define a function with arg
-function myFunc(arg: any) { console.log(arg + " in 8 Hours!"); }
+function myFunc(arg: any) {
+  console.log(arg + " in 8 Hours!");
+}
 // call the function with arguments
 myFunc("C#");
 function add(num1: any, num2: any) {
@@ -11,7 +15,7 @@ function add(num1: any, num2: any) {
   // pass the result value to the caller
 }
 console.log("3 + 5 = " + add(3, 5));
-const booktitle = function() {
+const booktitle = function () {
   // define an anonymous function
   return "Perl in 8 Hours";
 };

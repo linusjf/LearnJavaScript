@@ -1,12 +1,16 @@
 #!/usr/bin/env ts-node
 /* eslint-disable no-unused-vars */
-function getId(x: Element) { return x.id; }
+function getId(x: Element) {
+  return x.id;
+}
 // error: Argument of type 'null' is not assignable to parameter of type
 // 'Element'. getId(null);
-function getID(x: Element|null) { return x!.id; }
+function getID(x: Element | null) {
+  return x!.id;
+}
 // getID(null);
 // runtime error
-function getIdentity(x: Element|null) {
+function getIdentity(x: Element | null) {
   if (x) {
     return x.id;
     // In this branch, x's type is Element
@@ -22,7 +26,7 @@ type ListNode = {
 };
 function addNext(node: ListNode) {
   if (node.next === undefined) {
-    node.next = {data : 0};
+    node.next = { data: 0 };
   }
 }
 function setNextValue(node: ListNode, value: number) {

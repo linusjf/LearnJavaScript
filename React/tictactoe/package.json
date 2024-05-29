@@ -20,6 +20,9 @@
     "react-scripts": "5.0.1",
     "web-vitals": "3.0.4"
   },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  },
   "name": "tictactoe",
   "private": true,
   "scripts": {

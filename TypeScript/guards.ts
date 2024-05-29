@@ -14,7 +14,7 @@ function exampleString(foo: any) {
 }
 exampleString("hello world");
 // prints "it's a string: hello world"
-exampleString({something : "else"});
+exampleString({ something: "else" });
 // prints "don't know what this is! [[object Object]]"
 
 interface JQuery {
@@ -35,10 +35,14 @@ function exampleQuery(foo: any) {
 
 class Pet {}
 class Dog extends Pet {
-  bark() { console.log("woof"); }
+  bark() {
+    console.log("woof");
+  }
 }
 class Cat extends Pet {
-  purr() { console.log("meow"); }
+  purr() {
+    console.log("meow");
+  }
 }
 function examplePet(foo: any) {
   if (foo instanceof Dog) {

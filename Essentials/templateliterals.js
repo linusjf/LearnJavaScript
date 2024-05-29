@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /* eslint-disable no-unused-vars, no-unexpected-multiline, no-inner-declarations */
 console.log(`\`` === "`");
 // true
@@ -59,10 +60,13 @@ function recursive(strings, ...values) {
   console.log(strings, values);
   return recursive;
 }
-recursive`Hello``World`;
+recursive`Hello`
+`World`;
 // [ 'Hello' ] []
 // [ 'World' ] []
-recursive`Hello``, ``World`;
+recursive`Hello`
+`, `
+`World`;
 
 function template(strings, ...keys) {
   return (...values) => {

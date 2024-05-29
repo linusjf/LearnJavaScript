@@ -25,8 +25,7 @@ const myglobals = {
   ReactDOM: true
 };
 
-const config = [
-  {
+const config = [{
     ignores: [
       "**/dist/*",
       "React/**/dist/bundle.js",

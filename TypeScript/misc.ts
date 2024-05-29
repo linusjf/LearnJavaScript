@@ -12,8 +12,12 @@ myFunction();
 class Automobile {
   car: string;
   // declare a variable member “car”
-  constructor(car: string) { this.car = car; }
-  drive(): void { console.log("I am driving a new " + this.car); }
+  constructor(car: string) {
+    this.car = car;
+  }
+  drive(): void {
+    console.log("I am driving a new " + this.car);
+  }
 }
 
 const auto = new Automobile("limousine");
@@ -22,7 +26,9 @@ auto.drive();
 
 class Building {
   High: number;
-  constructor(param: number) { this.High = param; }
+  constructor(param: number) {
+    this.High = param;
+  }
 }
 
 // extends

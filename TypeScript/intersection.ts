@@ -8,7 +8,7 @@ interface BottleOpener {
 interface Screwdriver {
   turnScrew(): void;
 }
-type SwissArmyKnife = Knife&BottleOpener&Screwdriver;
+type SwissArmyKnife = Knife & BottleOpener & Screwdriver;
 function use(tool: SwissArmyKnife) {
   console.log("I can do anything!");
   tool.cut();
@@ -16,8 +16,14 @@ function use(tool: SwissArmyKnife) {
   tool.turnScrew();
 }
 const sak: SwissArmyKnife = {
-  cut() : void { console.log("Cut."); },
-  openBottle() : void { console.log("Opened bottle."); },
-  turnScrew() : void { console.log("Turned screw."); }
+  cut(): void {
+    console.log("Cut.");
+  },
+  openBottle(): void {
+    console.log("Opened bottle.");
+  },
+  turnScrew(): void {
+    console.log("Turned screw.");
+  }
 };
 use(sak);

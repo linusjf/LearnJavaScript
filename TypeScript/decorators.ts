@@ -1,11 +1,13 @@
 #!/usr/bin/env ts-node
 function addMetadataTarget(target: any) {
   // Add some metadata
-  target.__customMetadata = {someKey : "someValue"};
+  target.__customMetadata = { someKey: "someValue" };
   // Return target return target;
 }
 
-function getMetadataFromClass(target: any) { return target.__customMetadata; }
+function getMetadataFromClass(target: any) {
+  return target.__customMetadata;
+}
 
 function getMetadataFromInstance(target: any) {
   return target.constructor.__customMetadata;
@@ -31,8 +33,12 @@ function log<T>(target: T) {
 @log
 class Person {
   private _name: string;
-  public constructor(name: string) { this._name = name; }
-  public greet() { return this._name; }
+  public constructor(name: string) {
+    this._name = name;
+  }
+  public greet() {
+    return this._name;
+  }
 }
 
 console.log(getMetadataFromClass(Person));
@@ -45,10 +51,14 @@ console.log(getMetadataFromInstance(person2));
 /*function getMetadataFromClass(target: any) {
   return target.__customMetadata;
 } */
-@addMetadata({guid : "417c6ec7-ec05-4954-a3c6-73a0d7f9f5bf"})
+@addMetadata({ guid: "417c6ec7-ec05-4954-a3c6-73a0d7f9f5bf" })
 class Individual {
   private _name: string;
-  public constructor(name: string) { this._name = name; }
-  public greet() { return this._name; }
+  public constructor(name: string) {
+    this._name = name;
+  }
+  public greet() {
+    return this._name;
+  }
 }
 console.log(getMetadataFromClass(Individual));

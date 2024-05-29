@@ -1,5 +1,5 @@
 {
-  // comment
+  /* eslint-disable jsonc/no-multi-str */
   "title": "JSON5 Example",
   "owner": {
     "name": "Tom Preston-Werner",
