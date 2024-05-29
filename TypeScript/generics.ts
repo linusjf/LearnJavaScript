@@ -1,4 +1,5 @@
 #!/usr/bin/env ts-node
+/* eslint-disable no-unused-vars */
 interface IStatus<U> {
   code: U;
 }
@@ -9,32 +10,24 @@ interface IEvents<T> {
 }
 class State<T> implements IEvents<T> {
   list: T[];
-  constructor() {
-    this.list = [];
-  }
-  emit(event: T): void {
-    this.list.push(event);
-  }
-  getAll(): T[] {
-    return this.list;
-  }
+  constructor() { this.list = []; }
+  emit(event: T): void { this.list.push(event); }
+  getAll(): T[] { return this.list; }
 }
 interface Code {
   message: string;
   status: number;
 }
 const s = new State<IStatus<number>>();
-s.emit({ code: 200 });
-//s.emit({ code: '500' });
+s.emit({code : 200});
+// s.emit({ code: '500' });
 s.getAll().forEach((event) => console.log(event.code));
 const s2 = new State<IStatus<Code>>();
-s2.emit({ code: { message: "OK", status: 200 } });
-s2.getAll()
-  .map((event) => event.code)
-  .forEach((event) => {
-    console.log(event.message);
-    console.log(event.status);
-  });
+s2.emit({code : {message : "OK", status : 200}});
+s2.getAll().map((event) => event.code).forEach((event) => {
+  console.log(event.message);
+  console.log(event.status);
+});
 
 interface IResult<T> {
   wasSuccessful: boolean;
@@ -43,13 +36,13 @@ interface IResult<T> {
 }
 
 const response: IResult<string> = {
-  wasSuccessful: true,
-  error: "",
+  wasSuccessful : true,
+  error : "",
   clone() {
     const copy: IResult<string> = {
-      wasSuccessful: this.wasSuccessful,
-      error: this.error,
-      clone: this.clone
+      wasSuccessful : this.wasSuccessful,
+      error : this.error,
+      clone : this.clone
     };
     return copy;
   }
@@ -67,9 +60,7 @@ interface IRunnable<T, U> {
 }
 
 const runnable: IRunnable<string, number> = {
-  run(input: string): number {
-    return input.length;
-  }
+  run(input: string) : number { return input.length; }
 };
 
 const input: string = "Input";
@@ -77,20 +68,14 @@ const result: number = runnable.run(input);
 console.log(result);
 
 class Result<T> implements IResult<T> {
-  constructor(
-    public wasSuccessful: boolean,
-    public error: T
-  ) {}
+  constructor(public wasSuccessful: boolean, public error: T) {}
   public clone(): IResult<T> {
     return new Result<T>(this.wasSuccessful, this.error);
   }
 }
 
 class StringResult implements IResult<string> {
-  constructor(
-    public wasSuccessful: boolean,
-    public error: string
-  ) {}
+  constructor(public wasSuccessful: boolean, public error: string) {}
   public clone(): IResult<string> {
     return new StringResult(this.wasSuccessful, this.error);
   }
@@ -100,7 +85,7 @@ class StringResult implements IResult<string> {
 const r1 = new Result(false, "error: 42");
 // Compiler infers T to number
 const r2 = new Result(false, 42);
-//let r3 = new Result<string>(true, null);
-// Explicitly set T to string
-//let r4 = new Result<string>(true, 4);
-// Compilation error because 4 is not a string
+// let r3 = new Result<string>(true, null);
+//  Explicitly set T to string
+// let r4 = new Result<string>(true, 4);
+//  Compilation error because 4 is not a string

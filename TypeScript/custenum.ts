@@ -1,13 +1,10 @@
 #!/usr/bin/env ts-node
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
 class Enum {
   constructor(protected value: string) {}
-  public toString() {
-    return String(this.value);
-  }
-  public is(value: Enum | string) {
-    return (this.value = value.toString());
-  }
+  public toString() { return String(this.value); }
+  public is(value: Enum|string) { return (this.value = value.toString()); }
 }
 
 class SourceEnum extends Enum {
@@ -20,9 +17,7 @@ class TestEnum extends SourceEnum {
   public static value4 = new TestEnum("value4");
 }
 
-function checkEnum(test: TestEnum) {
-  return test === TestEnum.value2;
-}
+function checkEnum(test: TestEnum) { return test === TestEnum.value2; }
 const value1 = TestEnum.value1;
 console.log(value1 + ", hello");
 console.log(value1.toString() === "value1");
@@ -32,4 +27,4 @@ console.log(checkEnum(TestEnum.value2));
 // this works but perhaps your TSLint would complain
 // attention! does not work with ===
 // use .is() instead
-console.log(TestEnum.value1 == <any>"value1");
+console.log(TestEnum.value1 == < any > "value1");

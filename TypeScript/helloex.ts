@@ -1,8 +1,8 @@
 #!/usr/bin/env ts-node
-import { hello, helloES } from "./helloes";
+import {hello, helloES} from "./helloes";
 import defaultHello from "./helloes";
 import * as Bundle from "./helloes";
-import { welcome } from "./welcome";
+import {welcome} from "./welcome";
 hello("World");
 helloES("Mundo");
 defaultHello("World");

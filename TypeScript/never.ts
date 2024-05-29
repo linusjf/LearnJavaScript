@@ -1,4 +1,5 @@
 #!/usr/bin/env ts-node
+/* eslint-disable no-unused-vars */
 // never type
 let xn: never;
 let yn: never;

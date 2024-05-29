@@ -1,4 +1,5 @@
 #!/usr/bin/env ts-node
+/* eslint-disable no-unused-vars */
 interface IPerson {
   name: string;
   age: number;
@@ -23,9 +24,7 @@ class SampleClass implements ISampleClassInterface {
     this.sampleVariable = "string value";
     this.answerToLifeTheUniverseAndEverything = 42;
   }
-  public sampleMethod(): any {
-    return this.answer;
-  }
+  public sampleMethod(): any { return this.answer; }
   private answer(q: any): number {
     return this.answerToLifeTheUniverseAndEverything;
   }
@@ -71,9 +70,7 @@ interface IKickable {
   kick(distance: number): void;
 }
 class Ball {
-  kick(distance: number): void {
-    console.log("Kicked", distance, "meters!");
-  }
+  kick(distance: number): void { console.log("Kicked", distance, "meters!"); }
 }
 
 const kickable: IKickable = new Ball();
@@ -85,10 +82,8 @@ interface Pet {
 }
 
 function checkCompatible(petOne: Pet, petTwo: Pet) {
-  if (
-    petOne.species === petTwo.species &&
-    Math.abs(petOne.age - petTwo.age) <= 5
-  ) {
+  if (petOne.species === petTwo.species &&
+      Math.abs(petOne.age - petTwo.age) <= 5) {
     return true;
   }
 }

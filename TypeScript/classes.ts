@@ -1,13 +1,10 @@
 #!/usr/bin/env ts-node
+/* eslint-disable no-unused-vars */
 class Parent {
   static num: number;
-  static func(): void {
-    console.log("The num value is " + Parent.num);
-  }
+  static func(): void { console.log("The num value is " + Parent.num); }
   str: string = "";
-  myFunc(): void {
-    console.log("I am from parent class.");
-  }
+  myFunc(): void { console.log("I am from parent class."); }
 }
 
 class Child extends Parent {
@@ -41,45 +38,37 @@ const book = new EBook();
 console.log(book.title);
 
 const ebook: Book = {
-  title: "Perl in 8 hours"
+  title : "Perl in 8 hours"
 };
 console.log(ebook.title);
 
 const books = {
-  title1: "Swift in 8 hours",
-  title2: "Scala in 8 hours",
-  title: function () {}
+  title1 : "Swift in 8 hours",
+  title2 : "Scala in 8 hours",
+  title : function() {}
 };
 console.log(books.title1);
 console.log(books.title2);
-books.title = function () {
-  console.log("Kotlin in 8 hours");
-};
+books.title = function() { console.log("Kotlin in 8 hours"); };
 books.title();
 
 abstract class Machine {
   constructor(public manufacturer: string) {}
 
-  summary(): string {
-    return `${this.manufacturer} makes this machine.`;
-  }
+  summary(): string { return `${this.manufacturer} makes this machine.`; }
 
   abstract moreInfo(): string;
 }
 
 class Car extends Machine {
-  constructor(
-    manufacturer: string,
-    public position: number,
-    protected speed: number
-  ) {
+  constructor(manufacturer: string, public position: number,
+              protected speed: number) {
     super(manufacturer);
   }
-  move() {
-    this.position += this.speed;
-  }
+  move() { this.position += this.speed; }
   moreInfo() {
-    return `This is a car located at ${this.position} and going ${this.speed} mph!`;
+    return `This is a car located at ${this.position} and going ${
+        this.speed} mph!`;
   }
 }
 
@@ -104,15 +93,9 @@ class Vehicle {
   public position: number = 0;
   private _speed: number = 42;
   private _MAX_SPEED = 100;
-  move() {
-    this.position += this._speed;
-  }
-  get speed(): number {
-    return this._speed;
-  }
-  set speed(value: number) {
-    this._speed = Math.min(value, this._MAX_SPEED);
-  }
+  move() { this.position += this._speed; }
+  get speed(): number { return this._speed; }
+  set speed(value: number) { this._speed = Math.min(value, this._MAX_SPEED); }
 }
 
 const vhl = new Vehicle();
@@ -128,15 +111,9 @@ class SomeClass {
     this.someMemberValue = this.getFortyTwo();
     this.somePrivateValue = this.getTrue();
   }
-  public static getGoodbye(): string {
-    return "goodbye!";
-  }
-  public getFortyTwo(): number {
-    return 42;
-  }
-  private getTrue(): boolean {
-    return true;
-  }
+  public static getGoodbye(): string { return "goodbye!"; }
+  public getFortyTwo(): number { return 42; }
+  private getTrue(): boolean { return true; }
 }
 
 class AutoMobile {
@@ -149,8 +126,7 @@ class AutoMobile {
 
   describeCar() {
     console.log(
-      `${this.name} car comes with ${this.engineCapacity} displacement`
-    );
+        `${this.name} car comes with ${this.engineCapacity} displacement`);
   }
 }
 
@@ -166,8 +142,7 @@ class Honda extends AutoMobile {
   describeHonda() {
     super.describeCar();
     console.log(
-      `this car comes with seating capacity of ${this.seatingCapacity}`
-    );
+        `this car comes with seating capacity of ${this.seatingCapacity}`);
   }
 }
 

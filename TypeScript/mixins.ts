@@ -1,19 +1,14 @@
 #!/usr/bin/env ts-node
+/* eslint-disable no-unused-vars */
 class Flies {
-  fly() {
-    console.log("Is it a bird? Is it a plane?");
-  }
+  fly() { console.log("Is it a bird? Is it a plane?"); }
 }
 class Climbs {
-  climb() {
-    console.log("My spider sense is tingling.");
-  }
+  climb() { console.log("My spider sense is tingling."); }
 }
 
 class Bulletproof {
-  deflect() {
-    console.log("My wings are a shield of steel.");
-  }
+  deflect() { console.log("My wings are a shield of steel."); }
 }
 
 class BeetleGuy implements Climbs, Bulletproof {
@@ -21,7 +16,7 @@ class BeetleGuy implements Climbs, Bulletproof {
   deflect!: () => void;
 }
 
-applyMixins(BeetleGuy, [Climbs, Bulletproof]);
+applyMixins(BeetleGuy, [ Climbs, Bulletproof ]);
 
 function applyMixins(derivedCtor: any, baseCtors: any[]) {
   baseCtors.forEach((baseCtor) => {
