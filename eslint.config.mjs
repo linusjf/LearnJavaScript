@@ -28,9 +28,19 @@ const myglobals = {
 const config = [
   {
     ignores: [
-      "**/dist/**/*",
-      "**/build/**/*",
-      "**/docs/**/*",
+      "**/dist/*",
+      "React/**/dist/bundle.js",
+      "**/build/*",
+      "**/docs/*",
+      "**/TypeScript/*.js"
+    ]
+  },
+  {
+    ignores: [
+      "**/dist/*",
+      "React/**/dist/bundle.js",
+      "**/build/*",
+      "**/docs/*",
       "**/TypeScript/*.js"
     ],
     files: [
@@ -39,8 +49,7 @@ const config = [
       "**/*.ts",
       "**/*.js",
       "**/*.mjs",
-      "**/*.cjs",
-      "./.*.js"
+      "**/*.cjs"
     ],
     languageOptions: {
       ecmaVersion: "latest",
@@ -78,7 +87,7 @@ const config = [
     }
   },
   {
-    ignores: ["**/dist/**/*", "**/build/**/*"],
+    ignores: ["**/dist/**", "**/build/**"],
     files: ["**/*.html"],
     plugins: {
       "@html-eslint": html
@@ -110,7 +119,7 @@ const config = [
     }
   },
   {
-    ignores: ["**/dist/**/*", "**/build/**/*"],
+    ignores: ["**/dist/**", "**/build/**"],
     files: ["**/*.jsx"],
     ...react,
     rules: {
@@ -132,7 +141,7 @@ const config = [
     }
   },
   {
-    ignores: ["**/dist/**/*", "**/build/**/*"],
+    ignores: ["**/dist/**", "**/build/**"],
     files: ["**/*.tsx"],
     ...react,
     rules: {
@@ -164,4 +173,5 @@ const config = [
   }
 ];
 
+console.log(js.configs.recommended);
 export default config;

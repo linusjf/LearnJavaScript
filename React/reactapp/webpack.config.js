@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js"
+    index: "./src/index.jsx"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -18,20 +18,22 @@ module.exports = {
   },
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./dist"
   },
   module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /(node_modules|bower_components)/,
-      use: {
-        loader: "babel-loader",
-        options: {
-          presets: ["@babel/preset-env"],
-          plugins: ["@babel/plugin-proposal-object-rest-spread"]
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-proposal-object-rest-spread"]
+          }
         }
       }
-    }]
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
