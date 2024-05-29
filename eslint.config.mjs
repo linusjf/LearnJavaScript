@@ -173,5 +173,4 @@ const config = [
   }
 ];
 
-console.log(js.configs.recommended);
 export default config;
