@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+/* eslint-disable no-unused-vars, no-unexpected-multiline, no-inner-declarations */
 console.log(`\`` === "`");
 // true
 console.log(`\${1}` === "${1}");
@@ -59,13 +59,10 @@ function recursive(strings, ...values) {
   console.log(strings, values);
   return recursive;
 }
-recursive`Hello`
-`World`;
+recursive`Hello``World`;
 // [ 'Hello' ] []
 // [ 'World' ] []
-recursive`Hello`
-`, `
-`World`;
+recursive`Hello``, ``World`;
 
 function template(strings, ...keys) {
   return (...values) => {
@@ -85,21 +82,27 @@ console.log(t1Closure("Y", "A")); // "YAY!"
 
 const t2Closure = template`${0} ${"foo"}!`;
 // const t2Closure = template([""," ","!"],0,"foo");
-console.log(t2Closure("Hello", {
-  foo: "World"
-})); // "Hello World!"
+console.log(
+  t2Closure("Hello", {
+    foo: "World"
+  })
+); // "Hello World!"
 
 const t3Closure = template`I'm ${"name"}. I'm almost ${"age"} years old.`;
 // const t3Closure = template(["I'm ", ". I'm almost ", " years old."], "name", "age");
-console.log(t3Closure("foo", {
-  name: "MDN",
-  age: 30
-}));
+console.log(
+  t3Closure("foo", {
+    name: "MDN",
+    age: 30
+  })
+);
 // "I'm MDN. I'm almost 30 years old."
-console.log(t3Closure({
-  name: "MDN",
-  age: 30
-}));
+console.log(
+  t3Closure({
+    name: "MDN",
+    age: 30
+  })
+);
 // "I'm MDN. I'm almost 30 years old."
 const callHistory = [];
 
