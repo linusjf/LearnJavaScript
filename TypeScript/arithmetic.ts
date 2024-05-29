@@ -1,12 +1,12 @@
 #!/usr/bin/env ts-node
-let x: number = 20;
-const y: number = 2;
-let result: number = 0;
-result = x + y;
-console.log("20 + 2 = " + result);
-result = x / y;
-console.log("20 / 2 = " + result);
-result = x % y;
-console.log("20 % 2 = " + result);
-result = ++x;
-console.log("++x = " + result);
+let x1: number = 20;
+const y1: number = 2;
+let result1: number = 0;
+result1 = x1 + y1;
+console.log("20 + 2 = " + result1);
+result1 = x1 / y1;
+console.log("20 / 2 = " + result1);
+result1 = x1 % y1;
+console.log("20 % 2 = " + result1);
+result1 = ++x1;
+console.log("++x = " + result1);
