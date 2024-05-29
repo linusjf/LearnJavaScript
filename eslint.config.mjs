@@ -22,11 +22,17 @@ const myglobals = {
   ReactRedux: true,
   JSX: true,
   React: true,
-  ReactDOM: true,
+  ReactDOM: true
 };
 
-const config = [{
-    ignores: ["**/dist/**/*", "**/build/**/*", "**/docs/**/*"],
+const config = [
+  {
+    ignores: [
+      "**/dist/**/*",
+      "**/build/**/*",
+      "**/docs/**/*",
+      "**/TypeScript/*.js"
+    ],
     files: [
       "**/*.jsx",
       "**/*.tsx",
@@ -34,51 +40,51 @@ const config = [{
       "**/*.js",
       "**/*.mjs",
       "**/*.cjs",
-      "./.*.js",
+      "./.*.js"
     ],
     languageOptions: {
       ecmaVersion: "latest",
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...myglobals,
-      },
+        ...myglobals
+      }
     },
-    ...js.configs.recommended,
+    ...js.configs.recommended
     //    ...jsdoc.configs["flat/recommended"]
   },
   {
     name: "ESLint for TypeScript",
     files: ["**/*.ts"],
     plugins: {
-      ts: typescript,
+      ts: typescript
     },
     ...typescript.configs["flat/recommended"],
     languageOptions: {
       ecmaVersion: "latest",
       globals: {
-        ...globals.browser,
+        ...globals.browser
       },
       parserOptions: {
         ecmaVersion: "latest",
-        sourceType: "module",
+        sourceType: "module"
       },
-      parser: tsParser,
+      parser: tsParser
     },
     settings: {
       typescript: {
-        version: "detect",
-      },
-    },
+        version: "detect"
+      }
+    }
   },
   {
     ignores: ["**/dist/**/*", "**/build/**/*"],
     files: ["**/*.html"],
     plugins: {
-      "@html-eslint": html,
+      "@html-eslint": html
     },
     languageOptions: {
-      parser: htmlparser,
+      parser: htmlparser
     },
     rules: {
       ...html.configs["flat/recommended"].rules,
@@ -86,29 +92,29 @@ const config = [{
       "@html-eslint/require-closing-tags": [
         "error",
         {
-          selfClosing: "always",
-        },
+          selfClosing: "always"
+        }
       ],
       "@html-eslint/no-extra-spacing-attrs": [
         "error",
         {
-          enforceBeforeSelfClose: true,
-        },
+          enforceBeforeSelfClose: true
+        }
       ],
       "@html-eslint/element-newline": [
         "error",
         {
-          skip: ["pre", "code", "p"],
-        },
-      ],
-    },
+          skip: ["pre", "code", "p"]
+        }
+      ]
+    }
   },
   {
     ignores: ["**/dist/**/*", "**/build/**/*"],
     files: ["**/*.jsx"],
     ...react,
     rules: {
-      "react/react-in-jsx-scope": "off",
+      "react/react-in-jsx-scope": "off"
     },
     languageOptions: {
       parser: tsParser,
@@ -116,46 +122,46 @@ const config = [{
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...myglobals,
-      },
+        ...myglobals
+      }
     },
     settings: {
       react: {
-        version: "detect",
-      },
-    },
+        version: "detect"
+      }
+    }
   },
   {
     ignores: ["**/dist/**/*", "**/build/**/*"],
     files: ["**/*.tsx"],
     ...react,
     rules: {
-      "react/react-in-jsx-scope": "off",
+      "react/react-in-jsx-scope": "off"
     },
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        project: "tsconfig.json",
+        project: "tsconfig.json"
       },
       globals: {
         ...globals.browser,
         ...globals.node,
-        JSX: true,
-      },
+        JSX: true
+      }
     },
     settings: {
       react: {
-        version: "detect",
-      },
-    },
+        version: "detect"
+      }
+    }
   },
   ...yaml.configs["flat/recommended"],
   ...jsonc.configs["flat/recommended-with-json"],
   {
     rules: {
-      "jsonc/no-comments": "off",
-    },
-  },
+      "jsonc/no-comments": "off"
+    }
+  }
 ];
 
 export default config;
