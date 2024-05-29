@@ -21,10 +21,10 @@ interface Bird extends Pet {
   sing(): any;
 }
 
-function buyPet(pet: Species, name: string): Pet;
-function buyPet(pet: "cat", name: string): Cat;
-function buyPet(pet: "dog", name: string): Dog;
-function buyPet(pet: "bird", name: string): Bird;
+// function buyPet(pet: Species, name: string): Pet;
+//  function buyPet(pet: "cat", name: string): Cat;
+//  function buyPet(pet: "dog", name: string): Dog;
+//  function buyPet(pet: "bird", name: string): Bird;
 
 function buyPet(pet: Species, name: string): Pet {
   if (pet === "cat") {

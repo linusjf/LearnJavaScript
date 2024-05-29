@@ -11,6 +11,7 @@ class Rusher implements IRusher {
     try {
       runnable.run();
     } catch (e) {
+      // empty block
     }
   }
 }
@@ -19,5 +20,6 @@ function runSafe<T extends IRushable>(runnable: T): void {
   try {
     runnable.run();
   } catch (e) {
+    // empty block
   }
 }
